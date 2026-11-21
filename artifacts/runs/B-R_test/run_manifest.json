@@ -1,0 +1,19 @@
+{
+  "run_id": "B-R_test",
+  "created_at_bangkok": "2026-11-21T11:02:29+07:00",
+  "model_id": "B-R",
+  "model_revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+  "split": "test",
+  "seed": 42,
+  "config": {
+    "run_id": "B-R",
+    "model_label": "B-R",
+    "mode": "B-R"
+  },
+  "source_tree_sha256": "809f9ad65e7f4fb317a47546d932cf31912021bee0de2867a8c40e40e69f58fd",
+  "config_tree_sha256": "f03789deb459d1d000527df85498719772d81f9c0e8a2665fd1ac0a2c4f740b1",
+  "data_manifest_sha256": "355f7e0ca85d62ee7085e2ea6e277b4d86604310f83eeca9802124c95d35069a",
+  "dtype": "torch.bfloat16",
+  "elapsed_s": 308.51638932399993,
+  "n_selected": 480
+}

@@ -1,0 +1,24 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.15, pytest-9.2.0, pluggy-1.7.0 -- D:\000MINHTHONG\Graduation Thesis\experiments\CKA-Med\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\000MINHTHONG\Graduation Thesis\experiments\CKA-Med
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0, platformdirs-4.14.8
+collecting ... collected 12 items
+
+tests/test_p1_fixtures.py::test_poc_plan_exact_4_group_fixture PASSED    [  8%]
+tests/test_p1_fixtures.py::test_all_correct_all_wrong_and_zero_cfr_denominator PASSED [ 16%]
+tests/test_p1_fixtures.py::test_semantic_unknown_vs_abstain_vs_invalid PASSED [ 25%]
+tests/test_p1_fixtures.py::test_missing_variant_and_incomplete_coverage_not_dropped PASSED [ 33%]
+tests/test_p1_fixtures.py::test_duplicate_prediction_key_rejected PASSED [ 41%]
+tests/test_p1_fixtures.py::test_forbidden_fields_rejected_in_prompt_and_model_input PASSED [ 50%]
+tests/test_p1_fixtures.py::test_cluster_bootstrap_and_roundtrip PASSED   [ 58%]
+tests/test_p5_objectives.py::test_answer_only_token_mask_ignores_prompt_tokens PASSED [ 66%]
+tests/test_p5_objectives.py::test_conditional_mask_rules PASSED          [ 75%]
+tests/test_p5_objectives.py::test_empty_mask_returns_scalar_zero_and_no_nan PASSED [ 83%]
+tests/test_p5_objectives.py::test_js_gradient_flows_to_both_branches PASSED [ 91%]
+tests/test_p5_objectives.py::test_lambda_zero_matches_sft_numerically PASSED [100%]
+
+============================= 12 passed in 7.93s ==============================
+

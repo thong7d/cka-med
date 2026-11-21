@@ -1,0 +1,161 @@
+group_id,task_type,condition,cxr,question,gold,pred_BR,pred_BS,pred_MC
+slake_test_q11950,V,Knear,False,Does the picture contain lung?,yes,yes,no,no
+slake_test_q11952,V,Knear,False,Is the lung healthy?,no,no,yes,yes
+slake_test_q11970,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q11975,V,Knear,False,Is there any abnormality in the spleen?,no,yes,yes,yes
+slake_test_q11982,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q11986,V,Knear,True,Does the lung look healthy?,no,no,no,no
+slake_test_q11989,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q11996,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12003,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12007,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12011,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12018,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12025,V,Knear,True,Does this image look normal?,no,no,no,no
+slake_test_q12029,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12036,V,Knear,True,Does this image look normal?,no,no,no,no
+slake_test_q12037,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12041,V,Knear,True,Does this image look normal?,no,no,no,no
+slake_test_q12045,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12052,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12053,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12068,V,Knear,True,Does this image look abnormal?,yes,yes,yes,yes
+slake_test_q12072,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12073,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12078,V,Knear,False,Does the picture contain liver?,yes,yes,yes,yes
+slake_test_q12079,V,Knear,False,Does the picture contain kidney?,yes,yes,yes,yes
+slake_test_q12082,V,Knear,False,Does the picture contain heart?,no,yes,no,no
+slake_test_q12096,V,Knear,False,Does the picture contain kidney?,no,yes,no,no
+slake_test_q12112,V,Knear,False,Does the picture contain lung?,yes,yes,yes,yes
+slake_test_q12142,V,Knear,False,Does the picture contain kidney?,no,yes,no,no
+slake_test_q12159,V,Knear,False,Does the picture contain kidney?,no,yes,no,no
+slake_test_q12160,V,Knear,False,Does the picture contain spleen?,yes,yes,no,no
+slake_test_q12164,V,Knear,False,Does the picture contain liver?,no,yes,no,no
+slake_test_q12172,V,Knear,False,Does this image look normal?,no,no,no,no
+slake_test_q12175,V,Knear,False,Does the picture contain kidney?,no,yes,no,no
+slake_test_q12176,V,Knear,False,Does the picture contain spleen?,no,yes,no,no
+slake_test_q12194,V,Knear,False,Does the picture contain liver?,yes,yes,yes,yes
+slake_test_q12195,V,Knear,False,Does the picture contain kidney?,yes,yes,yes,yes
+slake_test_q12227,V,Knear,False,Does the picture contain lung?,no,yes,no,no
+slake_test_q12239,V,Knear,False,Does the picture contain kidney?,no,yes,no,no
+slake_test_q12242,V,Knear,False,Does the picture contain heart?,no,yes,yes,yes
+slake_test_q12252,V,Knear,False,Does the picture contain liver?,yes,yes,yes,yes
+slake_test_q12271,V,Knear,True,Is/Are there abnormalities in the patient's right lung?,yes,yes,yes,yes
+slake_test_q12272,V,Knear,True,Is this image normal?,no,no,no,no
+slake_test_q12273,V,Knear,True,Can pneumothorax be observed on the lower left lung in this picture?,no,no,no,no
+slake_test_q12276,J,Khelp,True,What is the effect of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12278,J,Khelp,True,Which organs/organ in the picture belong to the respiratory system?,lung,lung,lung,lung
+slake_test_q12285,V,Knear,True,Is this a study of the chest?,yes,yes,yes,yes
+slake_test_q12287,V,Knear,True,Is/Are there abnormalities in the patient's right lung?,yes,yes,yes,yes
+slake_test_q12288,V,Knear,True,Can atelectasis be observed on the upper right lung in this picture?,no,yes,yes,yes
+slake_test_q12291,J,Khelp,True,What is the function of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12293,J,Khelp,True,Which organs/organ in the picture belong to the circulatory system?,heart,heart,heart,heart
+slake_test_q12299,V,Knear,True,Is this a study of the chest?,yes,yes,yes,yes
+slake_test_q12300,V,Knear,True,Is this a study of the pelvic cavity?,no,no,no,no
+slake_test_q12302,V,Knear,True,Is the lung abnormal?,yes,yes,yes,yes
+slake_test_q12303,V,Knear,True,Can mass be observed on the lower left lung in this picture?,yes,no,no,no
+slake_test_q12308,J,Khelp,True,Which organs/organ in the picture belong to the circulatory system?,heart,heart,heart,heart
+slake_test_q12314,V,Knear,True,Is this a study of the neck?,no,no,no,no
+slake_test_q12316,V,Knear,True,Does the patient have any abnormalities?,yes,yes,yes,yes
+slake_test_q12317,V,Knear,True,Is this image normal?,no,no,no,no
+slake_test_q12318,V,Knear,True,Can atelectasis be observed on the lower left lung in this picture?,yes,no,no,no
+slake_test_q12323,J,Khelp,True,Which organs/organ in the picture belong to the respiratory system?,lung,lung,lung,lung
+slake_test_q12332,V,Knear,True,Does the lung look abnormal?,yes,yes,yes,yes
+slake_test_q12333,V,Knear,True,Can pneumonia be observed on the right lung in this picture?,yes,yes,yes,yes
+slake_test_q12336,J,Khelp,True,What can the organ with black color in this image be used for?,breathe,"digest food, secrete enzymes",breathe,breathe
+slake_test_q12338,J,Khelp,True,Which organs/organ is part of the circulatory system in this image?,heart,heart,heart,heart
+slake_test_q12341,V,Knear,True,Do the organs in the image exist in the abdomen?,no,no,no,no
+slake_test_q12347,V,Knear,True,Is this image normal?,no,no,no,no
+slake_test_q12348,V,Knear,True,Can cardiomegaly be observed on the heart in this picture?,yes,yes,yes,yes
+slake_test_q12351,J,Khelp,True,What is the function of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12353,J,Khelp,True,Which organs/organ is part of the circulatory system in this image?,heart,heart,heart,heart
+slake_test_q12361,V,Knear,True,Does the lung look abnormal?,yes,yes,yes,yes
+slake_test_q12363,V,Knear,True,Can pulmonary infiltration be observed on the upper right lung in this picture?,no,yes,no,no
+slake_test_q12366,J,Khelp,True,What is the effect of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12368,J,Khelp,True,Which organs/organ is part of the respiratory system in this image?,lung,lung,lung,lung
+slake_test_q12376,V,Knear,True,Is the lung normal appearing?,no,yes,no,no
+slake_test_q12377,V,Knear,True,Is this image normal?,no,no,no,no
+slake_test_q12378,V,Knear,True,Can nodule be observed on the lower left lung in this picture?,yes,yes,no,no
+slake_test_q12381,J,Khelp,True,What is the function of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12383,J,Khelp,True,Which organs/organ is part of the circulatory system in this image?,heart,heart,heart,heart
+slake_test_q12391,V,Knear,True,Does the patient have any abnormalities?,yes,yes,yes,yes
+slake_test_q12392,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12393,V,Knear,True,Can nodule be observed on the upper right lung in this picture?,yes,yes,no,no
+slake_test_q12396,J,Khelp,True,What is the function of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12398,J,Khelp,True,Which organs/organ in the picture belong to the respiratory system?,lung,lung,lung,lung
+slake_test_q12401,V,Knear,True,Do the organs in the image exist in the chest?,yes,yes,yes,yes
+slake_test_q12406,V,Knear,True,Is the lung normal appearing?,no,no,no,no
+slake_test_q12407,V,Knear,True,Is/Are there abnormalities in the patient's left lung?,yes,yes,yes,yes
+slake_test_q12408,V,Knear,True,Can pneumothorax be observed on the lower right lung in this picture?,no,no,no,no
+slake_test_q12413,J,Khelp,True,Which organs/organ in the picture belong to the circulatory system?,heart,heart,heart,heart
+slake_test_q12416,V,Knear,True,Do the organs in the image exist in the abdomen?,no,no,no,no
+slake_test_q12421,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12422,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12423,V,Knear,True,Can pneumothorax be observed on the lower left lung in this picture?,yes,no,no,no
+slake_test_q12426,J,Khelp,True,What is the effect of the center organ in this picture?,promote blood flow,breathe,breathe,breathe
+slake_test_q12428,J,Khelp,True,Which organs/organ in the picture belong to the circulatory system?,heart,heart,heart,heart
+slake_test_q12436,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12437,V,Knear,True,Is the lung abnormal?,yes,yes,yes,yes
+slake_test_q12438,V,Knear,True,Can nodule be observed on the lower right lung in this picture?,no,yes,no,no
+slake_test_q12441,J,Khelp,True,What is the function of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12443,J,Khelp,True,Which organs/organ in the picture belong to the respiratory system?,lung,lung,lung,lung
+slake_test_q12451,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12452,V,Knear,True,Is the lung healthy?,no,no,no,no
+slake_test_q12453,V,Knear,True,Can pneumonia be observed on the upper right lung in this picture?,no,yes,no,no
+slake_test_q12456,J,Khelp,True,What is the effect of the center organ in this picture?,promote blood flow,breathe,breathe,breathe
+slake_test_q12458,J,Khelp,True,Which organs/organ in the picture belong to the respiratory system?,lung,lung,lung,lung
+slake_test_q12465,V,Knear,True,Is this a study of the neck?,no,no,no,no
+slake_test_q12466,V,Knear,True,Does the lung look abnormal?,yes,yes,yes,yes
+slake_test_q12467,V,Knear,True,Are there abnormalities in this image?,yes,yes,yes,yes
+slake_test_q12468,V,Knear,True,Can pneumonia be observed on the upper right lung in this picture?,yes,yes,no,no
+slake_test_q12471,J,Khelp,True,What is the function of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12473,J,Khelp,True,Which organs/organ is part of the respiratory system in this image?,lung,lung,lung,lung
+slake_test_q12479,V,Knear,True,Is this a study of the chest?,yes,yes,yes,yes
+slake_test_q12482,V,Knear,True,Is the lung normal appearing?,no,no,no,no
+slake_test_q12483,V,Knear,True,Can pneumonia be observed on the lower right lung in this picture?,yes,yes,no,no
+slake_test_q12486,J,Khelp,True,What is the effect of the center organ in this picture?,promote blood flow,breathe,breathe,breathe
+slake_test_q12488,J,Khelp,True,Which organs/organ is part of the circulatory system in this image?,heart,heart,heart,heart
+slake_test_q12496,V,Knear,True,Is/Are there abnormalities in the patient's left lung?,yes,yes,yes,yes
+slake_test_q12498,V,Knear,True,Can infiltration be observed on the lower left lung in this picture?,yes,yes,no,no
+slake_test_q12501,J,Khelp,True,What can the organ with black color in this image be used for?,breathe,"digest food, secrete enzymes",breathe,breathe
+slake_test_q12503,J,Khelp,True,Which organs/organ is part of the circulatory system in this image?,heart,heart,heart,heart
+slake_test_q12510,V,Knear,True,Is this a study of the head?,no,no,no,no
+slake_test_q12511,V,Knear,True,Does the patient have any abnormalities?,yes,yes,yes,yes
+slake_test_q12512,V,Knear,True,Does the lung look abnormal?,yes,yes,yes,yes
+slake_test_q12513,V,Knear,True,Can effusion be observed on the lower left lung in this picture?,yes,no,no,no
+slake_test_q12516,J,Khelp,True,What can the organ with black color in this image be used for?,breathe,breathe,breathe,breathe
+slake_test_q12518,J,Khelp,True,Which organs/organ is part of the circulatory system in this image?,heart,heart,heart,heart
+slake_test_q12521,V,Knear,True,Do the organs in the image exist in the chest?,yes,yes,yes,yes
+slake_test_q12524,V,Knear,True,Is this a study of the abdomen?,no,no,no,no
+slake_test_q12525,V,Knear,True,Is this a study of the pelvic cavity?,no,no,no,no
+slake_test_q12527,V,Knear,True,Is this image normal?,no,no,no,no
+slake_test_q12528,V,Knear,True,Can effusion be observed on the lower left lung in this picture?,yes,no,no,no
+slake_test_q12531,J,Khelp,True,What is the effect of the main organ in this picture?,breathe,breathe,breathe,breathe
+slake_test_q12533,J,Khelp,True,Which organs/organ is part of the respiratory system in this image?,lung,lung,lung,lung
+slake_test_q12540,V,Knear,False,Does the picture contain spleen?,no,yes,no,no
+slake_test_q12548,J,Khelp,False,Do any of the organs in the picture belong to the respiratory system?,no,no,no,no
+slake_test_q12556,V,Knear,False,Does the picture contain bladder?,no,no,no,no
+slake_test_q12562,J,Khelp,False,Do any of the organs in the picture belong to the digestive system?,no,no,no,no
+slake_test_q12569,V,Knear,False,Does the picture contain mandible?,yes,yes,yes,yes
+slake_test_q12570,V,Knear,False,Does the parotid appear in the image?,yes,yes,yes,yes
+slake_test_q12574,J,Khelp,False,What is the function of the organ on the top of this image?,"cutting, chewing, maintaining facial contour and assisting pronunciation","cutting, chewing, maintaining facial contour and assisting pronunciation","cutting, chewing, maintaining facial contour and assisting pronunciation","cutting, chewing, maintaining facial contour and assisting pronunciation"
+slake_test_q12576,J,Khelp,False,Are there organs in the picture that can digest food?,no,yes,no,no
+slake_test_q12577,J,Khelp,False,Do any of the organs in the picture belong to the circulatory system?,no,no,no,no
+slake_test_q12587,J,Khelp,False,Does the picture contain the organ which has the effect of gas delivery?,yes,yes,yes,yes
+slake_test_q12673,V,Knear,False,Is this a study of the neck?,no,no,no,no
+slake_test_q12769,V,Knear,False,Does the picture contain brian?,yes,yes,yes,yes
+slake_test_q12803,J,Khelp,False,Do any of the organs in the picture belong to the digestive system?,yes,yes,yes,yes
+slake_test_q12812,J,Khelp,False,Does the picture contain the organ which has the effect of detoxicating?,yes,liver,yes,yes
+slake_test_q12825,V,Knear,False,Does the picture contain heart?,no,yes,no,no
+slake_test_q12842,J,Khelp,False,What is the function of the organ on the center of this image?,"absorb nutrients, secrete enzymes, digest food","digest food, secrete enzymes","biotransformation, detoxification","biotransformation, detoxification"
+slake_test_q12867,J,Khelp,False,Are there organs in the picture that can digest food?,no,yes,yes,yes
+slake_test_q12902,V,Knear,False,Does the picture contain bladder?,yes,yes,yes,yes
+slake_test_q12915,V,Knear,False,Does the picture contain bladder?,yes,yes,yes,yes
+slake_test_q12920,J,Khelp,False,Does the picture contain the organ which has the effect of detoxicating?,no,kidney,no,no
+slake_test_q12923,V,Knear,False,Does the picture contain colon?,yes,yes,yes,yes
+slake_test_q12928,V,Knear,False,Does the rectum exist in this picture?,no,yes,yes,yes
+slake_test_q12944,J,Khelp,False,Are there organs in the picture that can promote blood flow?,no,yes,yes,yes
+slake_test_q12952,V,Knear,False,Is the brain healthy?,yes,no,no,no
+slake_test_q12960,V,Knear,False,Is the brain healthy?,yes,no,no,no
+slake_test_q12966,V,Knear,False,Does the picture contain lung?,yes,yes,yes,yes
+slake_test_q12993,V,Knear,False,Does the picture contain lung?,no,yes,no,no

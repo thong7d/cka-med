@@ -1,0 +1,49 @@
+protocol_version: v1
+frozen_at_bangkok: "2026-11-21T09:16:00+07:00"
+dataset_manifest: data/manifests/poc_v1.json
+train_data_path: data/processed/train.jsonl
+dev_data_path: data/processed/dev.jsonl
+test_data_path: data/processed/test.jsonl
+
+backbone:
+  model_id: Qwen/Qwen2.5-VL-3B-Instruct
+  revision: 66285546d2b821cf421d4f5eb2576359d3770cd3
+  dtype: torch.bfloat16
+  vision_encoder_frozen: true
+  min_pixels: 200704
+  max_pixels: 401408
+
+training:
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+  lora_targets: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  lora_visual_excluded: true
+  learning_rate: 1.0e-4
+  weight_decay: 0.01
+  grad_accum_steps: 8
+  epochs: 1
+  seeds: [42, 43]
+  lambda_cond_candidates: [0.5, 2.0]
+  ablation_unconditional_seed: 42
+
+primary_endpoints:
+  - acc_near_v
+  - acc_0_v
+  - kug
+
+comparator_model: B-S_seed42
+practical_baselines: ["B-N", "B-R", "B-P_v1", "B-F"]
+dependency_controls: ["D-Q", "D-K"]
+
+non_inferiority_margins_pp:
+  acc_0_v_max_drop: 0.03
+  acc_help_j_max_drop: 0.03
+  kug_max_drop: 0.03
+
+bootstrap_replicates: 2000
+bootstrap_seed: 20261121
+cluster_unit: image_id
+
+missing_prediction_policy: "Retain all eligible sample_ids in denominator; exit nonzero if incomplete coverage unless explicitly flagged."
+abstention_policy: "Argmax primary over fixed A/B on V and canonical train_j_vocab on J; separate invalid vs abstained vs wrong."

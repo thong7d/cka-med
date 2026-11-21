@@ -1,0 +1,8 @@
+# Limitations of the CKA-MedVQA PoC
+
+1. **No Clinical / Specialist Verification:** No physician or radiologist reviewed images, knowledge entries, or premise applicability. `premise_label` remains `null` and `verification` remains `not_established` throughout; no clinical safety or real-world deployment claim is permitted.
+2. **Closed-Vocabulary Benchmark Scope (SLAKE English):** SLAKE anatomy/system/function `kvqa` (`J`, `N=45` test groups across `28` images) covers a small `37`-answer train vocabulary, allowing SFT to internalize associations (`Acc_0(J)` rises from `71.11%` to `86.67–88.89%`), masking external-KG utility after training.
+3. **Statistical Power & Image Clustering:** SLAKE QA files contain no `patient_id`; clustering was performed by `image_id` (`63` unique test images, `30` CXR test images). With `63` clusters, 95% CIs span ~8–15 percentage points for baseline deltas.
+4. **Controlled Context Replay ≠ Deployable RAG:** `Khelp`, `Knear`, and `Kirrel` packs were deterministically constructed from the `69`-entry curated SLAKE KG subset rather than open-world retrieval over clinical guidelines.
+5. **Single Backbone & Pretraining Contamination Unknown:** Only `Qwen/Qwen2.5-VL-3B-Instruct` (`bfloat16`, frozen vision encoder, LoRA `r=8`) was evaluated; MedGemma 4B remained gated (401) and SLAKE exposure during pretraining cannot be ruled out.
+6. **Clean-Accuracy Trade-off Under SFT:** Same-data multi-context SFT reduced `CFR_near` from `15.69%` to `1.03%` at the cost of `-4.35 pp` clean `Acc_0(V)` (`88.70% -> 84.35%`) due to increased false negatives (`FN: 3 -> 14`).

@@ -1,0 +1,22 @@
+seed: 42
+dataset_repo: BoKelvin/SLAKE
+dataset_revision: a9083ce6c34ac3ffb17671a605962924d8a8f9e9
+raw_metadata_dir: artifacts/source_audit/slake_metadata
+raw_images_dir: data/raw/slake
+processed_dir: data/processed
+manifest_path: data/manifests/poc_v1.json
+near_dup_hamming_threshold: 2
+
+budgets:
+  train:
+    target_v_groups: 360
+    target_j_groups: 160
+    prefer_all_cxr: false
+  dev:
+    target_v_groups: 70
+    target_j_groups: 35
+    prefer_all_cxr: false
+  test:
+    target_v_groups: 115
+    target_j_groups: 45
+    prefer_all_cxr: true

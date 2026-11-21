@@ -1,0 +1,27 @@
+{
+  "phase": "P0",
+  "manifest_version": "2026-11-19",
+  "source_repository": "No git repository existed before P0",
+  "document_hashes": {
+    "docs/POC_PLAN.md": "bbcc549debe5657dde01a07f4a4c1974b0a056c418f3b368279640fafdef04c3",
+    "docs/SOURCE_ANALYSIS.md": "aab82dda01d57a7b7802722413d16b70af29f752e5165062dd8cce082283183b",
+    "docs/RESOURCE_ACCESS.md": "a50cd414083730c1bb381cb43bdfaf49dc9c0b90d9760d1b08a3c5245c85b4c7"
+  },
+  "dataset": {
+    "name": "BoKelvin/SLAKE",
+    "revision": "a9083ce6c34ac3ffb17671a605962924d8a8f9e9",
+    "license": "CC BY 4.0",
+    "metadata_audit_hash": "0d05f42b04e10ec4ac92d069a081b6b60e6d2352da0154b297f222b683d5384d"
+  },
+  "model": {
+    "name": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+    "license": "Qwen Research License Agreement",
+    "commercial_license_status": "not obtained"
+  },
+  "optional_model": {
+    "name": "google/medgemma-4b-it",
+    "access_status": "gated; unauthenticated probe 401",
+    "license_status": "requires HAI-DEF terms"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "gpu_name": "NVIDIA L4",
+  "dtype": "torch.bfloat16",
+  "model_load_time_s": 13.239341597,
+  "inference_120_records_s": 61.13159549099999,
+  "inference_examples_per_s": 1.9629783753585628,
+  "inference_peak_vram_mb": 8128.6572265625,
+  "train_10_opt_steps_profile": {
+    "run_id": "P3_profile_train_10steps",
+    "objective_mode": "conditional",
+    "lambda_cond": 0.5,
+    "opt_steps": 10,
+    "exposure_records": 40,
+    "n_pairs": 32,
+    "wall_time_s": 32.097065334999996,
+    "peak_vram_mb": 8352.57177734375,
+    "adapter_dir": "/vol/artifacts/runs/P3_profile_train_10steps/adapter",
+    "final_ans_loss": 0.6489776372909546,
+    "final_cond_loss": 0.004255242645740509,
+    "wall_time_s_total": 38.285690775999996
+  }
+}

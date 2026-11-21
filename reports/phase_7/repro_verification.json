@@ -1,0 +1,13 @@
+{
+  "data_hash_match_p4": true,
+  "config_hash_match_p4": true,
+  "src_files_changed_after_p4": [
+    "cka_med/training/trainer.py"
+  ],
+  "data_audit_status": "PASS",
+  "pytest_returncode": 0,
+  "pytest_summary": "12 passed in 5.13s",
+  "metric_recompute_exact_match": true,
+  "n_test_prediction_files_verified": 14,
+  "n_adapters_checksummed": 7
+}

@@ -1,0 +1,1285 @@
+=== PAGE 1 ===
+SurveyvàkiểmđịnhhướngkhóaluậnCKA-MedVQA
+Mục lục điều hướng
+1. Kết luận để ra quyết định 3
+2. Phạm vi và mức độ đầy đủ của survey 3
+2.1. Nhữnggìđãthựchiện . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .3
+2.2. Quytắcđưavàovàxếpmứcliênquan . . . . . . . . . . . . . . . . . . . . . .3
+2.3. Nhậtkýtruyvấncốtlõi . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .4
+3. Danh mục xếp theo mức liên quan 4
+TầngI—đốithủcầnđọctrướckhichốtnovelty . . . . . . . . . . . . . . . . . . . .4
+TầngII—tiềnlệcơchế,robustnessvàgrounding . . . . . . . . . . . . . . . . . . .6
+TầngIII—dữliệu,transfervànềntảng . . . . . . . . . . . . . . . . . . . . . . . .7
+4. Những claim của proposal phải sửa 8
+5. Khoảng trống ứng viên và phép thử để bác bỏ 8
+5.1. Địnhnghĩađốitượngthậtsựcầnnghiêncứu . . . . . . . . . . . . . . . . . . .9
+5.2. Matrậnpriorartởmứcđãxácminh . . . . . . . . . . . . . . . . . . . . . . .9
+5.3. Bakhoảngtrống,xếptheođộphùhợpchonhómsinhviên . . . . . . . . . . . .9
+5.4. Cácpháthiệncóthểlàmđềtàiphảiđổihướng . . . . . . . . . . . . . . . . . .10
+6. Thiết kế khóa luận được đề xuất 10
+6.1. Researchquestionsvàgiảthuyết . . . . . . . . . . . . . . . . . . . . . . . . .10
+6.2. Input,outputvàphạmvi . . . . . . . . . . . . . . . . . . . . . . . . . . . . .10
+6.3. Dữliệuvàchấtlượngnhãn . . . . . . . . . . . . . . . . . . . . . . . . . . . .10
+6.4. Quymô: chỉlàmụctiêuthiếtkế . . . . . . . . . . . . . . . . . . . . . . . . .11
+6.5. Môhìnhvàcơchếtốigiản . . . . . . . . . . . . . . . . . . . . . . . . . . . . .11
+7. Baselines, ablations và đánh giá công bằng 12
+7.1. Thứtựbaseline . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .12
+7.2. Ablationtheogiảthuyết . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .13
+8. Metrics và cách tránh kết luận sai 13
+8.1. Accuracyvàtransitiontable . . . . . . . . . . . . . . . . . . . . . . . . . . . .13
+8.2. CFRvàconditional-setbias . . . . . . . . . . . . . . . . . . . . . . . . . . . .13
+8.3. Knowledgeutility . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .13
+8.4. Reliabilityvàgrounding . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .14
+8.5. Thốngkê. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .14
+9. Quy trình nghiên cứu tiếp theo 14
+9.1. LộtrìnhPoC8tuần—đềxuất . . . . . . . . . . . . . . . . . . . . . . . . . . .14
+9.2. SauPoC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .14
+9.3. Go/no-gogates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .15
+10. Khả thi, nhân lực và chi phí 15
+11. Giá trị học thuật sẽ đến từ đâu? 16
+Kịchbảnđónggópmạnh . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .16
+Kịchbảngiátrịvừanhưnghợplệ . . . . . . . . . . . . . . . . . . . . . . . . . . .16
+1
+=== PAGE 2 ===
+CKA-MedVQA Báocáonghiêncứu
+Kịchbảnyếucầntránh . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .16
+12. Các sửa đổi cụ thể nên áp dụng vào proposal gốc 16
+13. Tài liệu tham khảo và tình trạng nguồn 17
+13.1. Tàiliệudongườidùngcungcấp . . . . . . . . . . . . . . . . . . . . . . . . .17
+13.2. Nguồnwebchínhđượcđốichiếu . . . . . . . . . . . . . . . . . . . . . . . . .17
+13.3. Tàinguyêntriểnkhai,khôngtínhlàpapersurveyriêng . . . . . . . . . . . . .18
+13.4. Candidatechưađưavàobằngchứngchốtnovelty . . . . . . . . . . . . . . . .18
+14. Năm câu hỏi cần nhóm và giảng viên chốt 19
+2
+=== PAGE 3 ===
+CKA-MedVQA Báocáonghiêncứu
+Ngày tra cứu: 24/10/2026. Đối tượng: Conditional Knowledge Alignment for Evidence-
+GroundedMedicalVisualQuestionAnswering. T rạng thái:khảosáttàiliệuvàthiếtkếnghiên
+cứu;chưathựcnghiệm.
+1. Kết luận để ra quyết định
+Nên tiếp tục hướng nghiên cứu, nhưng phải thu hẹp tuyên bố đóng góp và đặt một
+giai đoạn kiểm chứng trước khi chốt phương pháp. Bảnđềxuấtđãnhậndiệnđúngnguy
+cơbỏquatrithứcvàthiếugrounding;tuynhiên,danhsáchrelatedworkbanđầuchưađủđể
+xácnhậntínhmới.
+Bakếtluậnchính:
+1. Không mới ở cấp ý tưởng chung: chọnlọctrithức;giữlợiíchcủaretrievalđồngthời
+chốngnhiễu;dùnggate;huấnluyệnvớihardnegatives;tăngvisualgrounding;tạobench-
+markxungđột. Cácnhánhnàyđãcócôngtrìnhtươngứng[W01–W09, W12–W15, P05,
+P14–P17].
+2. Khoảng trống ứng viên đáng kiểm chứng: đánhgiávàhọccáchsửdụngmộtmệnh
+đềykhoađúngnhưngchỉđượcphépápdụngkhitiềnđềcầnthiếtđượcbằngchứngcủa
+cahỗtrợ;phânbiệttiềnđềbịphủđịnhvàchưaxácđịnhđượctiềnđề;đồngthờiđolợiích
+củatrithứchữuíchtrêncâuhỏithựcsựdùngcảảnhvàtrithức.
+3. Chưa thể xác nhận “chưa bất kỳ ai làm”. Mộtsốđốithủmớitìmthấymớiđọcđược
+abstracthoặcmetadata,chưatruycậpđượctoànvăn. Khôngtìmthấybàitrùngtênkhông
+chứngminhtínhmới. Khôngcócơsởgánxácsuất90%hay95%chonovelty.
+T ên làm việc đề xuất:Evidence-ConditionedKnowledgeUseinChestX-rayVQA:Applicability,
+Robustness,andUtility. Tênnàymôtảđốitượngkiểmnghiệmrõhơn“alignment”chungchung;
+khôngtuyênbốtênchưađượcsửdụng.
+Đóng góp chính nên là giao thức đánh giá và tập dữ liệu có kiểm định; đóng góp
+phương pháp chỉ được công nhận nếu vượt baseline mạnh trên cùng dữ liệu. Không
+camkếtSOTA,chấtlượnglâmsànghoặckhảnăngđượcnhậntạimộthộinghịcụthể.
+2. Phạm vi và mức độ đầy đủ của survey
+2.1. Những gì đã thực hiện
+• Đọc bản proposal được cung cấp; trích xuất 17 PDF trong bộ tài liệu dự án để sàng lọc
+abstract,vấnđềvàphạmvi. Đọcsâuhơnphầnphươngphápởcáctàiliệutrọngtâm,đặc
+biệtDEPO;đốichiếuMedKInstruct,MMCAPvàcáchướnggrounding.
+• Tìmkiếmquahaicôngcụtìmweb;ưutiênnguồntácgiả,arXiv,ACLAnthology,CVF,IJCAI,
+MICCAI,PubMedvàtrangdataset/modelchínhthức.
+• Mởvàkiểmtranguồnchínhchocácđốithủquantrọng. Mộtsốtrangtrảlỗitruycập;các
+trườnghợpđóđượcđánhdấuriêng,khôngsuydiễnnộidungphươngpháp.
+• Lậpdanhmục 46 công trình/benchmark nghiên cứu ,gồmtoànbộ17PDFvà29mục
+bổsung,theomứcliênquantớitínhmới. Danhmụcnàykhôngtínhmodelcardvàtrang
+dữliệubổsunglàpapermới.
+Đâylà focused scoping survey và novelty audit , khôngphảisystematicreviewđãđăng
+kýprotocolhoặcmộtbảnkiểmkêtoànbộyvăn. ChưaxuấtkếtquảtruyvấnScopus/Webof
+Science/PubMedtheomộtgiaothứccótổngsốbảnghi, chưasànglọcđộclậpbởihaingười,
+chưahoànthànhforward/backwardcitationsnowballingcủamọibài. Dođókhôngdựngsốliệu
+PRISMAhoặcnóiđãtìmhếtcáccôngtrìnhđếnngàytracứu.
+2.2. Quy tắc đưa vào và xếp mức liên quan
+Đưavàonếucôngtrìnhnghiêncứuítnhấtmộttrongcácthànhphần:MedVQAcótrithứcngoài;
+xửlýxungđộtảnh–vănbản/trithức;chọnlọcthôngtintheongữcảnh;robustness–utilitycủa
+RAG;grounding/hallucination;benchmarkvàdữliệuphụcvụkiểmchứng.
+3
+=== PAGE 4 ===
+CKA-MedVQA Báocáonghiêncứu
+Ưutiêntheothứtự: trùng cơ chế cần tuyên bố mới → trùng giao thức đánh giá → trùng
+miền MedVQA → nguồn dữ liệu/backbone hỗ trợ . Thứhạnglàđánhgiáphụcvụkhóaluận,
+khôngphảithứhạngchấtlượngpaper. Trongcùngtầng,thứtựcóthểthayđổisaukhiđọctoàn
+văn.
+Cácpapertext-onlyđượcgiữvìcóthểphủđịnhtínhmớicủaobjectivehoặccáchtạodữliệu,
+dùkhônggiảiquyếttoànbộbàitoánảnhykhoa. Cácbàifederatedlearning,multilingualvà
+fusionđượcđặtthấphơnvìkhácfailuremode.
+2.3. Nhật ký truy vấn cốt lõi
+Cáctruyvấndướiđâyđãđượcdùngtrongphiêntracứu;kếtquảchủyếulànguồntiếngAnh:
+Nhóm Truyvấntiêubiểu
+MedVQA+conflict "medicalvisualquestionanswering""knowledge"
+"conflict";"medicalVQA""true""irrelevant"knowledge
+Chọnlọctrithức "medical""selectiveknowledge""Fusion";medicalvisual
+questionansweringknowledgeconflictselectiveretrieval
+robustnessirrelevantknowledge
+Khoảngtrốnghẹp "MedVQA""applicability";"medical""knowledge
+applicability"OR"non-applicableknowledge"OR
+"inapplicableknowledge";"medicalvisualquestion
+answering""conditionalknowledge"
+MultimodalRAG multimodalretrievalaugmentedgenerationknowledge
+conflictvisualevidenceselectivereliance;"multimodal"
+"knowledgeconflict"benchmarkmitigation
+Truyđốithủ TìmchínhxáctiêuđềDEPO,AMiF,CAER,MR-RAG,
+MedEvidence-RAG,CKRA,MedRGB,mR²AG
+Grounding "GEMeX"medicalvisualquestionansweringgrounding;
+"medicalvisualquestionanswering""abstention"
+Tiềnlệtext-RAG TìmchínhxácSelf-RAG,RAFT,Making
+Retrieval-AugmentedLanguageModelsRobustto
+IrrelevantContext
+Tàinguyên ViX-Ray;SLAKE;VinDr-CXRaccess;MedGemmaofficial
+modelcard
+Truyvấnexactphrasecóthểbỏsótpaperdùngtênkhác. Kếtquảrỗnghoặckhôngliênquan
+ởtruyvấn“conditionalknowledge”khôngphảibằngchứngphủđịnhpriorart.
+3. Danh mục xếp theo mức liên quan
+Mức đọc: M=đãkiểmtraphầnphươngphápliênquantrongtoànvăn;A=abstract/giớithiệu
+chínhthứchoặcPDFđượccungcấpđủđểxácđịnhphạmvi,chưaaudittoànbộthínghiệm;L
+=metadata/tríchđoạnnguồnchính,chưađủđểkếtluậnvềphầnthiếu. Mọinhậnđịnh“còn
+khác”dướiđâylàsosánhtrongphầnđãđọc,khôngmặcđịnhpaperkhôngcónộidungđóở
+phụlục.
+Tầng I — đối thủ cần đọc trước khi chốt novelty
+Hạng Côngtrình
+Đãlàmgìvàkết
+quảliênquan
+Hệquảchokhóa
+luận Nguồn;mứcđọc
+1 CKRA—Beyond
+StaticKnowledge
+Lọctrithứctheo
+ngữcảnhmẫu;
+knowledge–image
+contrastivelearning
+vàguidedattention;
+báocáocảithiện
+trên
+SLAKE/VQA-RAD
+“Chọntrithứctheo
+ảnh/câuhỏi”không
+đủmới. Phảisotrực
+tiếprelevancevới
+premisesupport
+W01;A
+4
+=== PAGE 5 ===
+CKA-MedVQA Báocáonghiêncứu
+Hạng Côngtrình
+Đãlàmgìvàkết
+quảliênquan
+Hệquảchokhóa
+luận Nguồn;mứcđọc
+2 MR-RAG MedicalVQAvới
+multimodal
+relevance-aware
+RAG;côngtrình
+CVPR2026đãxác
+minh
+Đốithủbắtbuộc
+choselective
+retrieval/generation;
+chưađủtoànvănđể
+kếtluậnkhôngxửlý
+applicability
+W02;L
+3 DEPO—Beyond
+SurfaceFeatures
+Perturbcâuhỏi/ảnh
+vàresampleđápán
+khôngđượcưutiên
+đểcănchỉnhbằng
+chứng
+DPO,negativeđộng
+vàchống
+text-over-image
+khôngmới;đầuvào
+phươngphápmôtả
+làảnh–query,không
+mặcđịnhlàKGtruy
+xuấtriêng
+P14/W03;M
+4 CAER Routergắnclaimvới
+visualevidence,hai
+prefixexpertscho
+sup-
+ported/contradicted;
+backboneđóng
+băng
+Gatetheotrạngthái
+xungđộtđãcó. Phải
+làmrõvaitrò
+unknownvàtrithức
+tổngquátđúng
+W04;M
+5 mR²AG Quyếtđịnhkhinào
+retrievalcầnthiết
+vàđịnhvịevidence
+hữuích;giữnăng
+lực
+visual-dependent
+tasks
+“Dùngkiếnthứckhi
+cần”đãcótrong
+multimodalVQA
+W05;A
+6 AMiF—Alignment,
+MiningandFusion
+Alignmentđamức,
+hard-negative
+mining,gatedfusion
+từanswer
+vocabulary
+Gate/hardnegatives
+khôngmới;không
+đồngnhất
+answer-vocabulary
+priorvớitàiliệuy
+khoangoạisinh
+W06;M
+7 CMC-Bench—When
+ImageandText
+Disagree
+Canthiệpevidence
+theo
+image-correct/text-
+correct/both-
+wrong/aligned;tách
+abstentionvà
+fabrication
+Benchmarkxung
+độtđaphươngthức
+cótrước;cầnmột
+khácbiệtngữnghĩa
+vượt“thaysangảnh
+ykhoa”
+W07;A
+8 MakingRetrieval-
+Augmented
+LanguageModels
+RobusttoIrrelevant
+Context
+NLIfilteringvàSFT
+trộn
+relevant/irrelevant
+context;xétđồng
+thờilợiíchvàtác
+hạiretrieval
+Phủđịnhnovelty
+củamụctiêu
+robustness–utility
+tổngquát
+W08;A
+9 MedKInstruct MMKG-guided
+instruction,
+multi-hop/hard
+negatives,path
+rewardchoRL
+KG+QAtổnghợp+
+hardnegatives
+khôngđủmới
+P05;A
+10 MedRGB Đánhgiámedical
+text-RAGvề
+sufficiency,
+integrationvà
+robustnesstrước
+nhiễu/thôngtinsai
+Đánhgiá
+sufficiency/reliability
+khôngmới;cầnbổ
+sungbằngchứng
+ảnhvàđiềukiệnáp
+dụng
+W09;A
+11 Fine-grained
+knowledgefusion
+for
+retrieval-augmented
+medicalVQA
+Nghiêncứuretrieval
+vàknowledgefusion
+trongđúngmiền
+Cầnlấytoànvăn
+trướckhichốtđóng
+gópfusion
+W10;L
+12 MedEvidence-RAG Côngtrìnhvềjoint
+evidenceretrieval
+vàgenerator
+alignmentcho
+VQA/report
+generation
+Tênvàmetadata
+chothấyoverlap;
+chưađủdữliệuđể
+đánhgiáchitiết
+hoặcloạitrừtrùng
+lặp
+W11;L
+5
+=== PAGE 6 ===
+CKA-MedVQA Báocáonghiêncứu
+Tầng II — tiền lệ cơ chế, robustness và grounding
+Hạng Côngtrình Đónggópliênquan
+Cáchdùngtrong
+khóaluận Nguồn;mứcđọc
+13 KCM—Enhancing
+Retrieval-
+AugmentedLVLMs
+viaKnowledge
+ConflictMitigation
+Điềuchỉnh
+attention,neuronvà
+contextlogitsđể
+giảmxungđột
+context–parametric
+memory
+Baselineconflict
+mitigation;khácvới
+việcmặcđịnhtri
+thứctruyxuất
+khôngđủđiềukiện
+ápdụng
+W12;A
+14 Utility-Oriented
+VisualEvidence
+Selection
+Dùnginformation
+gain/latent
+helpfulnessđểchọn
+visualevidence
+Phânbiệtrelevance
+vàutilityđãcó;
+khôngtuyênbốđó
+làpháthiệnđầutiên
+W13;A
+15 Self-RAG Adaptiveretrieval
+vàreflectionvề
+evidence/generation
+Tiềnlệchoretrieval
+decision,relevance,
+support
+W14;A
+16 RAFT Huấnluyệnsửdụng
+tàiliệuliênquanvà
+bỏquadistractors
+BaselineSFTtheo
+dữliệucanthiệp;
+khôngcoilàthuật
+toánảnhykhoa
+nguyênbản
+W15;A
+17 AMANDA Question
+decompositionkết
+hợpbiomedicalKG
+retrievaltrong
+frameworkkhông
+cầntrain
+Baselineknowledge
+augmentationnếu
+chiphíinference
+chophép
+W16;A
+18 MMKC-Bench Factualconflicts
+dạng
+context-memoryvà
+inter-context,nhiều
+loạimultimodal
+conflict
+Tiềnlệtaxonomyvà
+pairedconflict
+evaluation
+W17;A
+19 InsightOverSight Vision–
+commonsense
+conflict,benchmark
+vàFocus-on-Vision
+prompting
+Cầnbaseline
+promptưutiênảnh;
+parametricprior
+khácexternalK
+W18;A
+20 Unraveling
+Cross-Modality
+KnowledgeConflicts
+Phântíchxungđột
+parametricgiữa
+modalityvà
+dynamiccontrastive
+decoding
+Baselinedecoding
+nếucólogits;không
+phảicùngnguồn
+xungđộtvớiKG
+W19;A
+21 SameSemantics,
+DifferentOutcome
+Xétcùngevidence
+dưới
+text/rendered-image
+vàthứtựđưavào
+Cầnkiểmtravịtrí,
+modality,format
+củaevidence
+W20;A
+22 Diagnosing
+KnowledgeConflict
+inMultimodal
+Long-Chain
+Reasoning
+Phânbiệtconflictở
+input/processvà
+khảosát
+representation
+Đọcnếumởrộng
+mechanistic
+analysis;khôngcần
+choMVP
+W21;A
+23 Knowingor
+Guessing? —
+CCL/RoMed
+Consistency/contrastive
+learningcho
+paraphrase
+robustnesstrong
+MedVQA
+Cầnholdout
+templatevà
+paraphrase;
+consistencyloss
+khôngmới
+W22;A
+24 HEAL-MedVQA/
+Localize-before-
+Answer
+Grounding
+benchmarkvà
+localize-before-
+answervới
+segmentation
+annotations
+Nguồnthiếtkếkiểm
+travisualshortcut,
+baselinegrounding
+W23;A
+25 MedVH Benchmark
+hallucinationykhoa
+vớinhiềuloạiinput
+vàtask
+Bổsungirrele-
+vant/misleading
+inputvàover-refusal
+controls
+W24;A
+26 ProbMed—Worse
+thanRandom?
+Câuhỏiđốikháng
+vàprobingchẩn
+đoánnhiềuchiều
+Khôngthểsuyđộtin
+cậytừaccuracygộp
+P12;A
+6
+=== PAGE 7 ===
+CKA-MedVQA Báocáonghiêncứu
+Hạng Côngtrình Đónggópliênquan
+Cáchdùngtrong
+khóaluận Nguồn;mứcđọc
+27 ActasYouThink/
+MCR
+Consistencygiữa
+perception,
+reasoning,answer
+trongRLVR
+Lờigiảihợplývà
+đápánđúngphải
+đượckiểmtrariêng
+P01/W25;A
+28 A3Tune Weakvisuallabels
+từSAM/BiomedCLIP
+đểcănchỉnh
+attention
+ROI/attentiontuning
+khôngphảinovelty
+riêngcủaCKA
+P17;A
+29 MedVP Explicitvisual
+promptingvà
+fine-tuninghướng
+vùngquantâm
+Baselinehỗtrợ
+grounding;kiểmtra
+chiphí/lỗilocalizer
+P16;A
+30 MMCAP MedicalKG,concept
+alignmentvà
+type-conditional
+prompt
+“Conditionaltheo
+loạicâuhỏi”đãcó
+tiềnlệtrong
+MedVQA
+P15;A
+31 GEMeX-RMCoT,còn
+gọiGEMeX-ThinkVG
+Region-grounded
+reasoningdataset
+vàverifiablereward
+Khôngđếmhaitên
+làhaipaper;tham
+khảođánhgiá
+reasoning-
+grounding
+W26;A
+32 MedThink Rationale-
+augmented
+R-RAD/R-SLAKE/R-
+Pathvà
+rationale-guided
+training
+Rationale
+generationkhôngtự
+chứngminh
+faithfulness
+P06;A
+33 STLLaVA-Med Self-trainingvisual
+instructions,DPO
+vớigiámsáttừ
+modelmạnhhơn
+Syntheticdata+
+preferencelearning
+đãcó;phảikiểmtra
+labelnoise
+P10;A
+34 CAF-RAG Question-type
+analysisvàclinical
+filterchotext-only
+medicalRAG
+Dùdùngcâuhỏitừ
+MedVQA,nghiên
+cứuimage-free;
+khônggọiđâylà
+visualgrounding
+baselinetrựctiếp
+W27;L
+Tầng III — dữ liệu, transfer và nền tảng
+Hạng Côngtrình
+Vaitròvàgiớihạnđốivới
+đềtài Nguồn;mứcđọc
+35 SLAKE Cóknowledge-basedQA,
+KGvàvisualannotations;
+cầnauditlạicâuhỏithật
+sựdùngảnh
+W28;A
+36 GEMeX CXRQAcóvisual/textual
+explanations;khôngcó
+sẵnnhãnapplicability
+theothiếtkếđềxuất
+W29;A
+37 ViX-Ray CXRvàreportstiếngViệt;
+thíchhợpextensionngôn
+ngữ,chưaphải
+benchmarkconflict
+W30;A
+38 Med-MAT Generalizationqua
+modality×anatomy×
+task
+P02;A
+39 MasonNLPatMEDIQA-WV
+2025
+MultimodalexemplarRAG
+chowound-care;baseline
+retrievalthựcdụng
+P04;A
+40 MIRAGE/MedRAG Benchmark/toolkittext
+medicalRAG;giúpthiết
+kếretrievalbaselines
+W31;A
+7
+=== PAGE 8 ===
+CKA-MedVQA Báocáonghiêncứu
+Hạng Côngtrình
+Vaitròvàgiớihạnđốivới
+đềtài Nguồn;mứcđọc
+41 Fusionof
+Domain-AdaptedVision
+andLanguageModels
+Fusionbackbone
+domain-specificvà
+parameter-efficient
+adaptation
+P03;A
+42 PubMedCLIP Domainadaptationcủa
+image–textencodercho
+MedVQA
+P09;A
+43 OmniMedVQA Benchmarknhiều
+modality;hữuíchkiểm
+tratransfersaukhicó
+coreCXR
+P07;A
+44 WorldMedQA-V Multilingualmedical
+examinationVQA;scope
+rộnghơnCXRfindings
+P11;A
+45 PathVQA Benchmarkpathology
+VQA;dùngnếumởrộng
+ngoàiCXR
+P08;A
+46 X-FLoRA Cross-modalfederated
+learningvới
+modality-expertLoRA;
+khácfailuremodecủađề
+tài
+P13;A
+PathVQAưutiêntrướcX-FLoRAchoextensionngoàiCXR.X-FLoRAkhôngđượcchọnlàmtrụcột
+vìfederatedlearningkhônggiảiquyếttrựctiếpvấnđềsửdụngtrithứccóđiềukiện.
+4. Những claim của proposal phải sửa
+Claimcóthểbịphảnbiện Kếtluậnsurvey Cáchviếtphùhợphơn
+“LầnđầukếthợpKGvàMedVQA” Khôngđứngvững: SLAKE,MMCAP,
+MedKInstruct,AMANDA
+NêuKGlànguồnevidencecókiểm
+soát
+“Lầnđầuchỉdùngknowledgekhi
+cần”
+Khôngđứngvững: Self-RAG,mR²AG,
+CKRA
+Nêurõtiềnđềnàophảiđượcảnhhỗ
+trợvàkiểmchứngnó
+“LầnđầugiảmhạimàgiữlợiíchRAG” Khôngđứngvững: Yoranvàcộngsự,
+RAFT
+Nghiêncứufailuremodehẹpvà
+trade-offtrêndomaincụthể
+“Gatetheoimage–knowledgeconflict
+làmới”
+CAERvàselectivefusionlàmclaim
+nàyquárộng
+Nếudùnggate,xemlà
+implementation;chứngminh
+supervision/unknownđemlạikhác
+biệt
+“Đãcóconflictbenchmarknhưng
+chưacópairedtests”
+CMC-BenchvàCAERđãcócấutrúc
+đánhgiáliênquan
+Tậptrungđúng-y-khoanhưngchưa
+đủtiềnđề,khôngchỉfalseclaim
+“DEPOlàđốithủgầnnhấtduynhất” ThiếuCKRA,MR-RAG,CAER,mR²AG,
+AMiF
+Phânnhómđốithủtheoobjective,
+kiếntrúcvàevaluation
+“CFR/KUGlàmetricmớiđượccộng
+đồngcôngnhận”
+Khôngcócăncứtrongtàiliệuhiệntại Gọilàoperationalmetricscủa
+proposal,côngkhaicôngthứcvàliên
+hệvớitransition/gainmetrics
+“CE+utilityCEtạomộtthuậttoán
+mới”
+Haisốhạngcóthểchỉtươngđương
+weightedSFT
+Phảicósame-data,same-budgetSFT
+ablationđểxácđịnhphầnđónggóp
+thực
+Điểm phân biệt quan trọng: AMiFdùnganswer-vocabularyprior;DEPOperturbquery/ảnh;
+CAERxétclaim/presupposition; MMKCxétfactualconflicts. Khônggomtấtcảthành“KGgây
+nhiễu”. Đólàcácloạievidencevàcanthiệpkhácnhau. Ngượclại,khácnguồnevidencekhông
+tựđộngđủtạomộtđónggóphọcthuậtmạnh.
+5. Khoảng trống ứng viên và phép thử để bác bỏ
+8
+=== PAGE 9 ===
+CKA-MedVQA Báocáonghiêncứu
+5.1. Định nghĩa đối tượng thật sự cần nghiên cứu
+ChoảnhI,câuhỏiq,trithứctổngquátKvàkếtluậnc.Táchítnhấtbốnthuộctính:
+1. T ruth:Kcóđúngtheonguồnykhoakhông?
+2. Relevance: Kcóliênquanđếnchủđềcủaqkhông?
+3. Premise support: nhữngđiềukiệncầnđểvậndụngKcóđượcIvàcácinputđượcphép
+cungcấphỗtrợkhông?
+4. Conclusion sufficiency: ngaycảkhitiềnđềđúng,Kcóđủđểkếtluậnc,haychỉchobiết
+mộtkhảnăng/liênhệ?
+Mộtquanhệdạng“AcóthểliênquanB”khôngtươngđươngquytắc“A⇒B”.TrườnghợpcóA
+nhưngsuyBchắcchắnlàlỗiđộmạnhsuyluận,khôngchỉlỗithiếutiềnđề. Datasetcầntách
+haikiểunày. Đâylà đề xuất phân rã cho nghiên cứu ,khôngtuyênbốmộttaxonomymới
+đãđượcchứngminh.
+VớiCXR,nhiềuđiềukiệnnhưtriệuchứng,thờigian,xétnghiệmhoặcbệnhsửkhôngquansát
+được. Khikhôngcóinputđó,nhãnđúngthườnglà không xác định được điều kiện áp dụng ,
+khôngphảichắcchắn“khôngápdụng”. Dovậynêndùngthuậtngữ evidence-conditioned
+supporttrongtaskcorethayvìhứasuyratoànbộclinicalapplicabilitychỉtừảnh.
+5.2. Ma trận prior art ở mức đã xác minh
+Trụckiểmtra Tiềnlệrõ Phầnứngviêncầnlàmrõ
+Chọnlọcevidencecóliênquan CKRA,AMiF,mR²AG Relevancecaonhưngtiềnđềchưa
+đượchỗtrợ
+Conflictdetection/routing CAER,MMKC Phânbiệtunsupportedvới
+contradictedtrongtrithứctổngquát
+ykhoa
+Phânbiệtảnhvàvănbảnđúng/sai CMC-Bench GiữKđúng,thaytrạngtháihỗtrợcủa
+ca,khôngdùngmisinformationlàm
+toànbộbenchmark
+Robustnessvàutilityđồngthời Yoranetal.,RAFT,mR²AG ĐođồngthờitrêncácnhómMedVQA
+đãkiểmchứngjointdependence
+GroundedMedicalVQA HEAL-MedVQA,GEMeX,DEPO,
+A3Tune
+Kếtnốilỗigroundingvớiviệcvượt
+quámứckếtluậnmàevidencecho
+phép
+MedicalRAGreliability MedRGB Bổsungtiềnđềquansáttừảnhvà
+nguồnuncertaintytáchbiệt
+Kết luận được phép: “Trongcácphầntàiliệuđãtruycập,chưaxácminhđượcmộtcôngtrình
+kếthợpđầyđủcácđiềukiệntrêntheođúnggiaothứcđềxuất.” Không được biến thành:
+“Khôngcócôngtrìnhnàogiảiquyếtbàitoánnày.”
+5.3. Ba khoảng trống, xếp theo độ phù hợp cho nhóm sinh viên
+G1 — Evaluation/data, ưu tiên cao nhất. Xâycácnhómcanthiệpgiữảnh–câuhỏicốđịnh
+vàthayloạiK;đồngthờidùngcặpảnhthậtcónhãnkhácnhauđểkiểmtracùngmộtK.MộtK
+phảicókhảnănghữuíchởcanàyvàkhôngđủcăncứởcakhác,đểmodelkhôngchỉnhậndiện
+vănphongcủanegative. Cầnchuyêngiakiểmđịnh;đâylànútthắtlớnhơnviệcviếtretriever.
+G2 — Method, triển khai sau G1. Họctiềnđềsupported/contradicted/unknownvàsửdụng
+nóđểđiềukiệnhóatrảlời. Sovớigatingrelevance,thửthêmgiámsátsupportvàobjective
+nhấtquáncóđiềukiện. Nếusame-dataSFTđạttươngđương,kếtluậnđónggópchínhlàdữ
+liệu/protocol;khôngcốgọilosslàthuậttoánmới.
+G3 — T ransfer , mở rộng có chọn lọc. Kiểmtraunseenknowledgesource,rulefamily,tem-
+plate và tiếng Việt. Tiếng Việt chỉ đáng là đóng góp riêng nếu có kiểm định thuật ngữ, phủ
+định/uncertaintyvàphântíchlanguageshift;dịchmáybộtiếngAnhrồiđoaccuracychưađủ.
+9
+=== PAGE 10 ===
+CKA-MedVQA Báocáonghiêncứu
+5.4. Các phát hiện có thể làm đề tài phải đổi hướng
+• Mộtđốithủđãcócùngtask,annotationvàevaluation: bỏclaim“taskmới”,chuyểnsang
+reproduction/extensioncócâuhỏikhác.
+• K_nakhônggâylỗihơndistractorthôngthườngsaukhicânbằngđộdài/chủđề: novelty
+củafailuremodeyếu.
+• Ngườigánnhãnkhôngthểphânbiệtsupported/contradicted/unknownổnđịnh: sửatask
+hoặchạphạmvi.
+• Knowledge QA vẫn giải được chỉ từ text/K: chưa chứng minh nghiên cứu MedVQA joint
+reasoning.
+• SFTcùngdữliệugiảiquyếtđượctoànbộvấnđề: đónggópdữliệuđángbáocáo;method
+claimkhôngđượchỗtrợ.
+• MôhìnhluôntừchốihoặcbỏK:khôngthànhcôngdùharmfulflipsgiảm.
+6. Thiết kế khóa luận được đề xuất
+6.1. Research questions và giả thuyết
+RQ Giảthuyếtcóthểbácbỏ Thiếtkếkiểmtra
+RQ1 Trithứcđúng,liênquannhưngchưa
+đủtiềnđềgâylỗikhácvới
+irrelevant/falseevidence
+Matchedgroups,cânbằng
+wording/length/topic;phântích
+pairedtransitions
+RQ2 Giámsátpremisesupporthữuích
+hơnrelevancegating
+Cùngbackbone/dữliệu/budget;so
+gaterelevancevớigatesupport
+RQ3 Conditionallearninggiảmharmful
+errorsmàgiữutility
+Risktạicùngcoverage,accuracy/gain
+trênknowledgegroupsvàconfidence
+intervals
+RQ4 Lợiíchtồntạingoàitemplate/source
+train
+Holdoutrulefamilies,sources,
+templatesvàmộtexternaldataset
+Giảthuyếtkhôngphảikếtquảmongmuốnphảiđạt. Trướckhitrain,ghiprimarycomparison,
+endpoint,non-inferioritymarginvàquytắcdừngtrongprotocol.
+6.2. Input, output và phạm vi
+Input: mộtCXRfrontal,mộtcâuhỏingắn,tốiđamộtnhómtrithứcnhỏcóprovenance. Cấu
+hìnhcorekhôngđưaground-truthreporthoặcnhãnfindingvàoinference. Metadatanàocósử
+dụngphảiđượckhaibáovàcungcấpcôngbằngchobaselines.
+Output: answerchuẩnhóa;trạngtháisupport;quyếtđịnhtrảlời/từchối;evidenceIDnếucó.
+Khôngbuộcsinhchain-of-thoughtdài. Lờigiảithíchchỉlàoutputcầnkiểmđịnh, khôngphải
+bằngchứngtrựctiếpcủacơchếnộibộ.
+T ask core:visualfindingvàcâuhỏiliênkếtmộtfindingquansátđượcvớitrithứcmôtả/giải
+thíchcókiểmđịnh. Tránhtreatmentrecommendationvàchẩnđoánnguyênnhânkhôngthể
+xácđịnhtừảnh.
+Ngôn ngữ: coretiếngAnhđểtậndụngbaseline/dataset;tiếngViệtlàextensionnếucóreview.
+Đâylàkhuyếnnghịthiếtkế,khôngphảiyêucầuđãđượcngườidùngxácnhận.
+6.3. Dữ liệu và chất lượng nhãn
+Nguồn Vaitròđềxuất Tìnhtrạngđãkiểmtra Điềukiệncònthiếu
+SLAKE Pilotknowledge/visualQA TrangtácgiảcóKG,
+annotationsvàdownload;
+bản1.0đượclàmsạchcó
+thểkhácpaper[W28]
+Đọclicensecủagóitải;
+auditjointdependence;
+khôngmặcđịnhtoànbộ
+SLAKElàCXR
+10
+=== PAGE 11 ===
+CKA-MedVQA Báocáonghiêncứu
+Nguồn Vaitròđềxuất Tìnhtrạngđãkiểmtra Điềukiệncònthiếu
+GEMeX CoreCXRQA/grounding
+nếuaccessphùhợp
+Repotácgiảcódatasubset,
+trainingcode;cópaperCXR
+explainability[W29]
+Kiểmtraquyềnảnhnguồn,
+split/patientIDs,nhãnnào
+dongườihaymáytạo
+VinDr-CXR Finding/localization
+validation
+PhysioNetmôtảradiologist
+annotationsvàcredentialed
+access[D01]
+Quyềntruycậpthựctếcủa
+nhómchưaxácminh;
+khôngcoi“open”làtảitự
+do
+ViX-Ray ExternalVietnamese
+validation
+LREC2026xácnhận5,400
+ảnhvới
+findings/impressionsdo
+chuyêngiaviết[W30]
+License,downloadvàbệnh
+nhân/splitchưaaudittrong
+phiênnày;reportkhôngtự
+lànhãnabsence
+VQA-RAD Benchmarkphụ Đượcsửdụngxuyênsuốt
+bộpaper
+Khôngdùngbenchmark
+nhỏlàmbằngchứngduy
+nhất;xácminhbảntảivà
+splittrướcchạy
+KhôngcầntảihàngloạtMIMIC-CXRhoặcxâyUMLSKGlớnchopilot.NếuchọnUMLS/SNOMED/RadLex,
+phảikiểmtrađúngđiềukhoảnphiênbảnvàkiểuquanhệ;tênontologykhôngbảođảmcócác
+quytắcsuyluậncầnchotask.
+Schema tối thiểu cho một intervention group:
+group_id,image_id,patient_id_if_available,source_dataset,split
+question,task_type,verified_answer,answerability
+visual_premise,premise_support,conclusion_strength
+knowledge_text,knowledge_source,source_version
+knowledge_truth,topic_relevance,context_role
+label_provenance,reviewer_ids,disagreement,adjudication
+Táchunknownvềbằngchứngkhỏiabstainlàhànhđộngcủamodel. Mộtđápán“khôngthểxác
+địnhtừảnh”cóthểlàcâutrảlờiđúngcủatask,khôngtựđộnglàmodeltừchốitrảlời.
+Các điều kiện K: không K; K hữu ích; K đúng nhưng không liên quan; K đúng và liên quan
+nhưngtiềnđềbịphủđịnh;Kđúngnhưngtiềnđềchưaxácđịnh;falseclaimcontrol. Khônggọi
+tấtcảcáctrườnghợpnàylà“conflict”.
+Các control bắt buộc: cùngKtrênnhiềuảnh;cùngảnhvớinhiềuK;K-only;q-only;I+qkhông
+K;ảnhkhôngphùhợpcókiểmsoát;paraphrasenguồnkhác;cânbằngđộdàivàvịtrí;negative
+khôngchỉchứatừ“không”.
+Đổisangảnhkháckhôngmặcđịnhgiữđápán. Occlusionkhôngmặcđịnhbiếnpositivethành
+negative; ảnhbịchecóthểtrởthànhunanswerable. Khôngthấyfindingtrongreportkhông
+đồngnghĩafindingâmtính.
+6.4. Quy mô: chỉ là mục tiêu thiết kế
+Pilot: 100–200 group phát triển và một tập audit độc lập nhỏ; mục tiêu phát hiện lỗi nhãn,
+shortcut,computevàtínhtồntạicủafailuremode. Quymônàykhôngđủbảođảmpháthiện
+cảithiệnvàiđiểmphầntrăm.
+Thesis:xâykhoảng1,000–3,000grouptrainnếupipelinenhãnđángtin;validationriêng;test
+chuyêngiakiểmđịnhưutiên300–600groupđộclậphoặcnhiềuhơntheopoweranalysis. Một
+groupcónhiềucontextvariantsnhưngkhôngđượctínhchúngnhưnhiềubệnhnhânđộclập.
+Cácsốtrênlàmốclậpkếhoạchđềxuất,khôngphảidữliệuđãcóhoặcyêucầutốiưuđãđược
+chứngminh. Saupilot,dùngvariancevàtỷlệdiscordantpairsđểquyếtđịnhcỡtestthựctế.
+Nếungânsáchreviewerkhôngđủ,giảmphạmviclaimthayvìtăngsynthetictestkhôngkiểm
+định.
+6.5. Mô hình và cơ chế tối giản
+Backbone ứng viên: MedGemma4Binstruction-tunedvìmodelcardchínhthứcmôtảxửlý
+medicalimage/text; cầnđồngýHAI-DEFterms[D02]. Đâykhôngphảikhẳngđịnhmodeltốt
+11
+=== PAGE 12 ===
+CKA-MedVQA Báocáonghiêncứu
+nhấtchotask. Freezevisionencodergiaiđoạnđầu;LoRA/QLoRAchocácmoduleđượcruntime
+hỗtrợ. GPUcầnthiếtphảiđobằngsmoketest,khôngsuyrachỉtừsốthamsố.
+Baseline thứ hai: chọnmộtVLMthuộcfamilykhácsaupilotvàxácminhcheckpoint/license.
+CóthểdùngcheckpointLLaVA-Medđểđốichiếupaperkhiphùhợp. Khôngkhóaversionhoặc
+lờihứabộnhớkhichưachạy.
+Bước đầu tiên: chuẩnhóaanswerspacecógiớihạn,khôngdùngsinhtựdodàichoprimary
+metric. Retrieval corpus nhỏ, có provenance; cố định context budget và input context giữa
+methods.
+Phương pháp ứng viên: mộtsupportheadg(I,q,K)dựđoántiềnđềởbatrạngthái;decoder
+điềukiệnhóavàosupportrepresentationdựđoán. Nhãnrolekhôngđivàoinferencenhưoracle.
+Mộtcandidateobjective:
+𝐿 = 𝐿 𝑎𝑛𝑠 + 𝜆𝑠𝐿𝑠𝑢𝑝𝑝𝑜𝑟𝑡 + 𝜆𝑐𝐿𝑐𝑜𝑛𝑑𝑖𝑡𝑖𝑜𝑛𝑎𝑙.
+• L_ans: supervisedanswerlosstrêntừngđiềukiệncótargetđãxácminh.
+• L_support: CEchonhãnpremisesupport;chỉtraintrênnhãnđủtincậy.
+• L_conditional: regularizergiữaanswerdistributionscủacáccontextvariantsmàđápán
+đượcxácminhlàbấtbiến;khôngápchomọicâuknowledge-dependent.
+Nếudùngteacherno-K,tránhdistillcácdựđoánsai;nếulọcteacher-correct,ghirõselection
+bias. SovớiCEtrêngoldtrướckhiquyếtđịnhKLcócầnthiết. KhôngbổsungutilityCEtrùng
+L_ansrồituyênbốđólàobjectivemới. Utilitylàràngbuộcđánhgiávàcânbằngdữliệu;chỉ
+thêmlosskhicógiảthuyếtđộclập.
+Không dạy abstain vì thiếu external K nếu mô hình có thể biết đáp án từ parametric
+knowledge. “Cầntrithứcngoàiảnh”và“bắtbuộccầnretrievedcontextvớimodelnày”là
+haikháiniệmkhác. Nếucầnclosed-bookevidencetask,phảicôngbốquytắcđánhgiáđóvà
+khôngmôtảnónhưQAlâmsàngtựnhiên.
+7. Baselines, ablations và đánh giá công bằng
+7.1. Thứ tự baseline
+Mã Baseline Mụcđích
+B0 q-onlyvàK+qkhôngảnh Kiểmtrashortcut/ngônngữvàjoint
+dependence
+B1 I+q,khôngexternalK Nănglựcquansátvàmốcno-retrieval
+B2 I+q+rawK Địnhlượnglợi/hạikhithêm
+knowledge
+B3 RawK+promptưutiên
+evidence/khôngsuyquámức
+Baselinerẻ,phảivượttrướckhitrain
+phứctạp
+B4 Relevancefilter/gate Phânbiệtlợiíchsupportsupervision
+vớilọctheotopic
+B5 Same-dataSFT,gồmtoànbộK
+variants
+Baselinequantrọngnhấtđểtách
+contributioncủadatavàloss
+B6 Unconditionalconsistency KiểmtranghiệmbỏKvàvaitròđiều
+kiệnhóa
+B7 Mộtmethodgần: CKRA/MR-RAGhoặc
+adaptationminhbạch;thêm
+CAER/DEPOnếuphùhợp
+Kiểmtrakhoảngtrốngtrướcpriorart
+mạnh
+B8 Oraclesupportgate Chỉdiagnosticupperbound,khôngso
+nhưhệthốngdeployable
+Khônggọimộtbản“inspiredbyCKRA”làtáilậpCKRA.Nếukiếntrúc/dữliệukhácnhau, báo
+rõadaptedbaseline. Sosánhpapernumberstrựctiếpgiữacácsplitvàanswer-normalization
+khácnhaukhônghợplệ.
+12
+=== PAGE 13 ===
+CKA-MedVQA Báocáonghiêncứu
+7.2. Ablation theo giả thuyết
+1. FullvscùngdữliệuchỉL_ans: đónggópobjectivengoàidata.
+2. Supportsupervisionvsrelevancesupervision: semanticapplicabilitycócầnkhông.
+3. Batrạngtháivshaitrạngthái: unknowncóthựcsựcảithiệnhaychỉthêmclass.
+4. Conditionalvsunconditionalregularization: cótránhbỏquaKkhông.
+5. Có/khôngKđúngnhưngthiếutiềnđề,giữtổngsốexamples/tokenbudget: contribution
+củaloạinegative.
+6. Predictedvsoraclesupport: lỗitừperception/supportestimatorhaygenerator.
+7. Held-outsources/templates/rulesvàcùngKtrênảnhmới: cóhọcshortcutkhông.
+8. Haibackbone,seedlặpchocấuhìnhchính: mứctổngquátvàđộổnđịnh.
+Khôngcầnchạyfullfactorialcủamọilựachọn. Khóabackbone/retriever/answerformattrước
+rồithaytừngyếutốtrọngtâm. Baselinephảinhậncùngcontext,dữliệutrain,sốbướchoặc
+training-tokenbudget;ghicomputebổsungchorouter/localizer.
+8. Metrics và cách tránh kết luận sai
+Vớimộtgroupi,đặtz_i^0=1nếumôhìnhtrảlờiđúngtrongđiềukiệnkhôngK,vàz_i^k=1nếu
+đúngdướiconditionk. Abstentiontrêncâuhỏianswerablekhôngđượctínhlàđúng;ghiriêng
+táchạidowronganswervàdoabstention.
+8.1. Accuracy và transition table
+Báo cáo accuracy/macro-F1 theo từng question type và từng context role. Báo cả bảng
+đúng→đúng, đúng→sai, sai→đúng, sai→sai, vàtransitionssangabstain. Accuracygộpcóthể
+cheviệcknowledgeQAtăngnhưngvisualQAgiảm.
+8.2. CFR và conditional-set bias
+Nếugiữcáchđặttêntrongproposal:
+𝐶𝐹 𝑅𝑘 = ∑𝑖 𝑧0𝑖 (1 − 𝑧 𝑘𝑖 )∑𝑖 𝑧0𝑖 .
+ĐâylàtỷlệmấtđápánđúngtrêncáccasemodelđãđúngkhikhôngK;khôngmặcđịnhmọi
+mất đúng đều là hallucination. Tách harmful wrong-answer rate và unnecessary-abstention
+rate. Khimẫusốbằng0,trảNA,khôngghi0.
+Mỗimodelcóthểcótậpno-K-correctkhácnhau. Vìthế không dùng CFR có mẫu số riêng
+làm bằng chứng so sánh duy nhất . Báothêmunconditionalharmful-flipratetrêntoàntest,
+accuracy under intervention, paired success và một common-support subset được mô tả rõ.
+Khôngchọnsubsetcólợisaukhinhìnkếtquả.
+8.3. Knowledge utility
+TrêntậpjointknowledgeQAcốđịnhJ:
+𝐾𝑈 𝐺 = 1|𝐽 | ∑𝑖∈𝐽 (𝑧ℎ𝑒𝑙𝑝𝑖 − 𝑧0𝑖 ).
+KUGlànetaccuracygain,khôngxácnhậnmodelthậtsựdùngảnh/Ktheocơchếmongmuốn.
+Báoriêngsốcaseđượccứu,sốcasebịlàmhỏngvàkiểmtrano-image/no-K.ChọnJbằngtask
+annotation,khôngchọnvìchínhbaselineđangtrảlờisai.
+13
+=== PAGE 14 ===
+CKA-MedVQA Báocáonghiêncứu
+CFR=0vàKUG=0cóthểxuấthiệnởmodelluônbỏK;đókhôngphảithànhcông. KUGthấp
+cũngcóthểdono-Kceilinghoặcmodelbiếtkiếnthứctừpretraining,khôngtựchứngminhgate
+thấtbại.
+8.4. Reliability và grounding
+• Risk–coveragecurve: sotỷlệsaitrongphầnđãtrảlờitạicùngcoverage.
+• Over-refusaltrêncáccaseanswerable;hiệuquảnhậndiệnunanswerableriêng.
+• Macro-F1/confusionmatrixchosupportstates;đặcbiệtnhầmunknown→contradicted.
+• GroundingIoU/pointingnếucónhãnphùhợp;khôngcoiattentionheatmaplàcausalfaith-
+fulness.
+• Thínghiệmthayảnhcónhãnlạivàxóa/đổiK:chứngcứhànhvivềdependency, không
+chứngminhquanhệnhânquảyhọc.
+8.5. Thống kê
+Bootstraptheopatient/group,khôngtheovariantđộclập;pairedcomparisontrêncùngcase;
+báo 95% CI. Với nhiều seed, báo variability giữa seed và uncertainty theo test groups riêng.
+CóthểdùngMcNemarchooutcomenhịphânpairedkhiđơnvịđộclậpphùhợp;khôngápmù
+quángtrênnhiềuQAcùngbệnhnhân.
+Tham khảo độ bất định: với tỷ lệ khoảng 0.5 và n=400 quan sát độc lập, xấp xỉ chuẩn cho
+CI95%cóhalf-widthkhoảng4.9điểmphầntrăm. Đâylàtínhtoánminhhọa1.96√(0.25/400),
+khôngphảipoweranalysiscủanghiêncứu;clusterdependencelàmcỡmẫuhiệudụngnhỏhơn.
+Pilot100–200groupskhôngchứngminhchắcchắnmộtcảithiện2–3điểm.
+9. Quy trình nghiên cứu tiếp theo
+9.1. Lộ trình PoC 8 tuần — đề xuất
+Tuần Côngviệc Deliverablekiểmtrađược Quyếtđịnh
+1 Hoànthiệnliteratureaudit
+đốithủtầngI,nhấtlàcác
+mụcL;kiểmtraaccess
+Bảngexactoverlapkèm
+section/page;danhsách
+code/data/license
+Nếutrùngtask+protocolthì
+chỉnhclaimtrướctrain
+2 Chốttaskdefinition,rubric
+vàannotationguidecùng
+ngườichuyênmôn
+30–50mẫuthửcó
+disagreement/adjudication
+Nếunhãnapplicability
+khôngđángtinthìthuhẹp
+premisesupport
+3 Tạopilotgroups,
+dedup/split;tảimột
+checkpointhợplệ
+Datasetcard,schema,
+checksum,splitmanifest
+Khôngcódata/reviewerthì
+chưachuyểnsangtraining
+4 ChạyB0–B4vàđocompute Errortaxonomy,paired
+transitions,GPU-time/VRAM
+Xácnhậnfailuremode
+khôngdotemplate/ảnhquá
+khó
+5 Same-dataSFTB5và
+candidatesupportmodel
+Training/evalreproducible,
+cùngngânsách
+Đánhgiáliệumethodcó
+giátrịngoàidata
+6 Ablationtrọngtâm Conditionalvs
+unconditional;2vs3trạng
+thái
+Nếuutilitymấtthìsửahoặc
+bỏmethodclaim
+7 Auditđộclập,held-out
+template/source
+Báocáoleakage/shortcut
+vàCI
+Nếuchỉsyntheticgainthì
+thiếtkếlạidata
+8 ViếtPoCvàquyếtđịnh
+phạmvikhóaluận
+Quyếtđịnhgo/pivot/no-go
+cósốliệu
+Chỉmởrộngkhicóbằng
+chứngvànguồnlực
+9.2. Sau PoC
+Tháng 3–4: mởrộngdữliệu/annotation;khóatest;táilậpđốithủphùhợp. Tháng 5–6: thí
+nghiệm chính, ablation và seed.Tháng 7–8: external transfer, kiểm định lỗi, viết luận văn
+vàreleaseartifacts. Tháng 9–12 nếu có: thêmbackbone/language,papersubmissionhoặc
+benchmarkextension.
+14
+=== PAGE 15 ===
+CKA-MedVQA Báocáonghiêncứu
+Đâylàlịchđềxuất,khôngphảithờigianhoànthànhđãxácminh. Chưacódeadline,ngânsách
+tốiđavàlịchchuyêngiahiệntạicủanhóm; không đủ dữ liệu để xác minh khả năng hoàn
+thành trong một học kỳ cụ thể .
+9.3. Go/no-go gates
+• G0 Novelty: đọcđượcđốithủquantrọngvàchỉrakhácbiệtkiểmnghiệmđược;không
+còndùngclaimđãbịpriorartphủđịnh.
+• G1 Label validity: rubricđượckiểmtra;disagreementcóxửlý;khôngđánhđồngmissing
+reportvớinegative.
+• G2 T ask validity:evidencechothấytestcócảjointdependencevàfailuremode;không
+chỉmodelkhôngđọcđượcảnh.
+• G3 Method validity: vượtstrongbaselinehoặcđạttrade-offtốthơnvớinon-inferiority
+vềutility/cleanperformance;CIphùhợp. Marginđặttrướctừpilotvàmụctiêuứngdụng,
+khôngbịangưỡng“chuẩn”.
+• G4 Generalization: lợiíchkhôngmấthoàntoàntrênnguồn/template/rulechưathấy.
+NếuG3khôngđạtnhưngG1/G2/G4tốt,luậnvăncóthểchuyểnthànhbenchmarkvàphântích
+giớihạncógiátrị. NếuG1hoặcG2khôngđạt,tăngmodelsizekhônggiảiquyếtđượcvấnđề
+thiếtkế.
+10. Khả thi, nhân lực và chi phí
+Đánh giá: khảthicóđiềukiệnchonhóm2–3ngườinếuchỉlàmCXR,mộtbackbonechính,một
+benchmarkcókiểmđịnhvàPEFT.Khôngđủdữliệuđểkhẳngđịnhngânsáchcụthểhoặcchắc
+chắnthuêGPUlàđủ. Reviewerchuyênmônvàtínhhợplệcủalabelslàđiềukiệnthựctếquan
+trọng.
+Vaitrò Tráchnhiệm
+Thànhviên1 Dataprotocol,evidenceprovenance,QAgeneration,
+leakage/splitaudit
+Thànhviên2 Baselines,training,experimenttracking,statistics
+Thànhviên3nếucó Reproduction,externalvalidation,annotationtooling,tài
+liệu/release
+Ngườichuyênmôn Kiểmđịnhtrithứcvàtiềnđềcaảnh;adjudicationcác
+casekhó
+Nếuchỉcóhaingười,ưutiêngiảmsốbackbonevàextensionngônngữ;khônggiảmchấtlượng
+coretestđểgiữthêmmodule.
+Không sao chép giá GPU giả định từ proposal thành báo giá hiện tại. Phiênnàychưa
+khảogiánhàcungcấp;chiphítiềnthựctế: Không đủ dữ liệu để xác minh . Lậpngânsách
+theođolường:
+𝑇𝑡𝑟𝑎𝑖𝑛 = ∑
+𝑗
+𝑁𝑗𝐸𝑗
+𝑟𝑗 3600, 𝐶 𝐺𝑃 𝑈 = ∑𝑗 𝑇 𝑏𝑖𝑙𝑙𝑒𝑑𝑗 𝑝𝑗.
+Nlàsốtrainingexamplesthựcsựsaunhânvariants;Elàepochs;rlàexamples/secondđotrên
+đúngmodel,resolution,packingvàGPU;T_billedgồmsetup,evaluationvàidlenếubịtínhtiền.
+Tổngcashcostcộngstorage,transfer,API,reviewervàdựphòng.
+Vídụ chỉ để kiểm tra số học ,khôngphảidựbáo: 10,000examples×2epochs÷0.5exam-
+ples/second=40,000giây≈11.1giờtraining/run. Sáucấuhình×baseed≈200GPU-giờ,chưa
+gồmevaluation/tuning. Tốcđộ0.5ởđâylàgiátrịminhhọa,chưađo.
+Reviewer budget: số groups × phút/group × số người review, cộng adjudication. Ví dụ 400
+groups×5phút×2reviewers≈66.7reviewer-giờ;5phútlàgiảđịnhminhhọavàcóthểquá
+thấpkhiđọcảnh/trithứckhó. Phảiđo30–50caseđầutrướckhiđặtlịch.
+15
+=== PAGE 16 ===
+CKA-MedVQA Báocáonghiêncứu
+Giảm chi phí có cơ sở: single-image; answer space hữu hạn; frozen encoder; cache em-
+beddingskhikiếntrúcchophép; pilotinferencetrướctrain; khôngRLrolloutstừđầu; không
+full-finetunemodellớn;khôngxâyKGtổngquát. Lưucảthấtbại/seedđểtránhchạylạikhông
+cầnthiết.
+11. Giá trị học thuật sẽ đến từ đâu?
+Kịch bản đóng góp mạnh
+1. Task có định nghĩa không nhập nhằng, phân biệt truth/relevance/premise sup-
+port/conclusionstrength.
+2. Testcóreview,provenance,pairedinterventions,held-outnguồn/quytắcvàleakagecon-
+trols.
+3. Chỉrafailuremodekhôngđượcbenchmarkchuẩnđođúngvàkhôngbịbaselinerẻgiải
+quyếthoàntoàn.
+4. Methodhoặctrainingrecipecảithiệntrade-offsovớisame-dataSFTvàđốithủgần,tái
+lậptrênđiềukiệnngoàitrain.
+5. Côngbốprotocol,code,annotationguide,splits,modelconfigs,failureanalysisvàdữliệu
+trongphạmvilicense.
+Kịch bản giá trị vừa nhưng hợp lệ
+Benchmarktốtvànghiêncứunegativeresult: support-gatingphứctạpkhônghơnSFT;lỗichủ
+yếudoperception;hoặcmodelmớiđãkhárobustnhưngunknownbịxửlýsai. Giátrịphụthuộc
+chấtlượngphépthửvàinsight,khôngbắtbuộcmộtbảngSOTA.
+Kịch bản yếu cần tránh
+Một pipeline ghép VLM + KG + prompt, test do cùng LLM tạo/chấm, chỉ so raw RAG, tăng
+accuracynhỏtrênrandomQAsplit,gọiattentionmaplàgiảithíchtrungthực,hoặcchọntên
+methodmớilàmbằngchứngnovelty.
+Khuyến nghị cuối: chốtnghiêncứuởmức “benchmark có kiểm định + nghiên cứu sử
+dụng tri thức theo bằng chứng của ca” ; giữmethodCKAlàgiảthuyếtcầnkiểmnghiệm.
+Đâylàcáchgiữkhảthivàvẫncócơhộiđónggóphọcthuậtkhiphươngphápđơngiảnhóa
+hoặckhôngvượtđốithủ.
+12. Các sửa đổi cụ thể nên áp dụng vào proposal gốc
+1. BổsungCKRA,MR-RAG,CAER,mR²AG,AMiF,CMC-Bench,Yoranetal.,RAFT,MedRGBvào
+relatedworkbắtbuộc.
+2. Chuyểnnoveltytừ“conditionalKG/gating”sangtask/protocolchưađượckiểmchứngđầy
+đủ.
+3. Tách not-applicable, unsupported premise, insufficient conclusion strength và factually
+false.
+4. Thay“image-only”bằng“I+q,noexternalK”ởcôngthứcvàbảngbaselineđểtránhnhầm
+input.
+5. Táchclinicalunknownkhỏimodelabstention;khôngépabstainchỉvìthiếuretrievedK.
+6. XemutilityCEcótrùnganswerCEkhông;bắtbuộcsame-dataSFTvàmatchedcompute.
+7. SửacáchsoCFRgiữamodelvìtậpdenominatorcóthểkhác.
+8. Đưaaccessdữliệuvàexpertreviewthànhgatetrướcmởrộngcompute.
+9. GiữtiếngViệt/ViX-Raylàextension,trừkhitaskvàannotationtiếngViệtlàtrọngtâmđược
+nhómchốt.
+10. Khônggiữ“first”,“chưaailàm”,hoặcsốtiền/hiệunănggiảđịnhnhưkếtluậnđãxácminh.
+16
+=== PAGE 17 ===
+CKA-MedVQA Báocáonghiêncứu
+13. Tài liệu tham khảo và tình trạng nguồn
+13.1. Tài liệu do người dùng cung cấp
+CácmãPdướiđâytrỏtớiPDFcùngtêntrongbộtàiliệudựán. Nộidungđượcđọctừbảnngười
+dùngcungcấp;khôngsuynăm/venuekhichưađốichiếuđược.
+• P01: Actasyouthink: ReinforcingConsistentReasoninginMedicalVisualQuestionAn-
+swering. 01-Act_as_you_think.pdf.
+• P02: Exploring Compositional Generalization of Multimodal LLMs for Medical Imaging.
+02-Exploring_Compositional_Generalization_of_Multimodal_LLMs.pdf.
+• P03: FusionofDomain-AdaptedVisionandLanguageModelsforMedicalVisualQuestion
+Answering. 03-Fusion_of_Domain-Adapted_Vision_and_Language_Models_for_Med.pdf.
+• P04: MasonNLPatMEDIQA-WV2025: MultimodalRetrieval-AugmentedGenerationwith
+LargeLanguageModelsforMedicalVQA.04-MasonNLP_at_MEDIQA-WV_2025.pdf.
+• P05: MedKInstruct. 05-MedKInstruct.pdf.
+• P06: MedThink: A Rationale-Guided Framework for Explaining Medical Visual Question
+Answering. 06-MedThink-s_R-RAD.pdf.
+• P07:OmniMedVQA:ANewLarge-ScaleComprehensiveEvaluationBenchmarkforMedical
+LVLM.07-OmniMedVQA.pdf.
+• P08: TowardsVisualQuestionAnsweringonPathologyImages. 08-PathVQA.pdf.
+• P09:PubMedCLIP:HowMuchDoesCLIPBenefitVisualQuestionAnsweringintheMedical
+Domain? 09-PubMedCLIP.pdf.
+• P10:Self-TrainingLargeLanguageandVisionAssistantforMedicine.10-Self-Training_Large_Language_and_Vision_Assistant_for_Medic.pdf.
+• P11: WorldMedQA-V: a multilingual, multimodal medical examination dataset for multi-
+modallanguagemodelsevaluation. 11-WorldMedQA-V.pdf.
+• P12: WorsethanRandom? AnEmbarrassinglySimpleProbingEvaluationofLargeMulti-
+modalModelsinMedicalVQA.12-Worse_than_Random.pdf.
+• P13:X-FLoRA:Cross-modalFederatedLearningwithModality-expertLoRAforMedicalVQA.
+13-X-FLoRA.pdf.
+• P14: Beyond Surface Features: Advancing Medical Vision-Language Alignment via Dy-
+namic Evidence-Guided Preference Optimization. 14-Beyond-Surface-Features.pdf, đặc
+biệt§2.
+• P15: Multi-modalConceptAlignmentPre-trainingforGenerativeMedicalVisualQuestion
+Answering. 15-MMCAP.pdf.
+• P16: Guiding Medical Vision-Language Models with Explicit Visual Prompts: Framework
+DesignandComprehensiveExplorationofPromptVariations.16-GuidingMedicalVLMwEVP.pdf.
+• P17:FocusonWhatMatters: EnhancingMedicalVision-LanguageModelswithAutomatic
+AttentionAlignmentTuning. 17-Focus-on-What-Matters.pdf.
+13.2. Nguồn web chính được đối chiếu
+• W01: Beyond Static Knowledge: Dynamic Context-Aware Cross-Modal Contrastive
+Learning for Medical Visual Question Answering — CKRA. IEEE TMI, issue 2026; DOI
+10.1109/TMI.2025.3617289. ĐọcabstracttácgiảquaPubMed;chưaauditfullpaper/code.
+• W02:MR-RAG:MultimodalRelevance-AwareRetrieval-AugmentedGenerationforMedical
+VisualQuestionAnswering .CVPR2026.MetadatanguồnCVFđượctìmthấy;mởHTML/PDF
+bị403. Khôngdùngbảntómtắtbênthứbađểchốtchitiếtkiếntrúc.
+• W03: DEPO/BeyondSurfaceFeatures . ACL2026;đốichiếuP14.
+• W04: CAER.Preprint31/07/2026. Đọcmotivation/evaluationvàmôtảrouter;chưakiểm
+trareproduction.
+• W05: mR²AG.V12024,v217/08/2026;trangarXivghiacceptedTMM.Đọcabstracthiện
+hành,khôngđếmversionsriêng.
+• W06: AMiF.CVPR2025,arXivupload09/10/2025. Đọc§3.3–3.4;phânbiệtngàyupload
+vớinămhộinghị.
+• W07: WhenImageandTextDisagree: Cross-ModalEvidenceConflictinMultimodalRAG .
+MAGMaR2026,CMC-Bench. Đọcabstractchínhthức.
+• W08:MakingRetrieval-AugmentedLanguageModelsRobusttoIrrelevantContext . Yoran
+vàcộngsự;v12023,revised2024. Đọcabstractchínhthức.
+17
+=== PAGE 18 ===
+CKA-MedVQA Báocáonghiêncứu
+• W09: ComprehensiveandPracticalEvaluationofRAGSystemsforMedicalQuestionAn-
+swering. MedRGB,2024. Đọcabstractchínhthức.
+• W10: Fine-grained knowledge fusion for retrieval-augmented medical VQA. Meta-
+data/abstractexcerpt;fullpagebị403.
+• W11: MedEvidence-RAGforJointEvidenceRetrievalandGeneratorAlignmentinMedical
+VQA and Report Generation. Metadata nguồn IEEE; mở trang bị lỗi. Không kết luận về
+chấtlượngthựcnghiệmhoặcđầyđủnovelty.
+• W12: Enhancing Retrieval-Augmented LVLMs via Knowledge Conflict Mitigation. AAAI
+2026,KCM.Đọcabstract.
+• W13: Utility-OrientedVisualEvidenceSelectionforMultimodalRAG .ACL2026. Đọcab-
+stract.
+• W14: Self-RAG.2023preprint. Đọcabstract.
+• W15: RAFT.2024. Đọcabstract.
+• W16: AMANDA.FindingsEMNLP2025. ĐọcabstractvàtríchđoạnpapernguồnACL.
+• W17:BenchmarkingMultimodalKnowledgeConflictforLargeMultimodalModels . MMKC-
+Bench,preprint2025; AAAI2026record .
+• W18: Insight Over Sight: Exploring the Vision-Knowledge Conflicts in Multimodal LLMs.
+ACL2025. Đọcabstract.
+• W19: UnravelingCross-ModalityKnowledgeConflictsinLVLMs . 2024. Đọcabstract.
+• W20: Same Semantics, Different Outcome: On the Modality Robustness of Multimodal
+LLMsunderKnowledgeConflict . 2026preprint;abstractquasearchnguồnarXiv,mởtrực
+tiếplỗi.
+• W21:DiagnosingKnowledgeConflictinMultimodalLong-ChainReasoning . 2026preprint;
+abstractquasearchnguồnarXiv.
+• W22: KnowingorGuessing? RobustMedicalVQAviaJointConsistencyandContrastive
+Learning. MICCAI 2025; RoMed/CCL. Trang đọc được ghi code/dataset N/A, không đồng
+nghĩachắcchắnchưacóreleaseởnơikhác.
+• W23: LocalizingBeforeAnswering: ABenchmarkforGroundedMedicalVQA .IJCAI2025;
+HEAL-MedVQA/LobA.Đọcabstract.
+• W24: MedVH: Towards Systematic Evaluation of Hallucination for LVLMs in the Medical
+Context. 2024preprint;abstracttácgiảquasearch.
+• W25: Actasyouthink . ACL2026;đốichiếuP01.
+• W26:GEMeX-RMCoT.V228/10/2025,ACMMM2025;têncũGEMeX-ThinkVG.Khôngphải
+hainghiêncứuđộclập.
+• W27: When does retrieval help medical question answering? … CAF-RAG. Nguồn xuất
+bảnghitext-based,image-free;tríchđoạnnguồnchính,mởfullpagebị403.
+• W28: SLAKE—trangtácgiả . ISBI2021;môtảdatasetvàbảndownload.
+• W29: GEMeX;repochínhthức . ICCV2025theorepo;đọcabstractvàREADME.
+• W30: ViX-Ray. LREC2026;đọcabstract/metadata.
+• W31: BenchmarkingRetrieval-AugmentedGenerationforMedicine ;repoMIRAGE.2024;
+metadata/abstractquanguồntácgiả.
+13.3. Tài nguyên triển khai, không tính là paper survey riêng
+• D01: VinDr-CXR trên PhysioNet. Nội dung nguồn chính qua search; mở trang timeout.
+Chưakiểmtraquyềntruycậptàikhoảncủanhóm.
+• D02: MedGemma4BIT—modelcardchínhthức . Đọcmôtảvàđiềukiệntruycập;chưa
+tải/chạymodel.
+13.4. Candidate chưa đưa vào bằng chứng chốt novelty
+CáckếtquảnhưPathFinder: Graph-structuredReasoningforMedicalVQA(OpenReviewbịchal-
+lenge), S-Chain, MVE-QGCAF, Does More Retrieved Evidence Help Visual RAG with Diffusion
+LanguageModels? vàcácsurveyMedVQAmớilàdanhsáchmởrộngcầnsànglọctiếp. Chưa
+dùngđểkhẳngđịnhmộtphươngphápđã/khônggiảiquyếtgap. Việccòncáccandidatenàylà
+mộtlýdokhôngtuyênbốsurveybaophủtuyệtđối.
+18
+=== PAGE 19 ===
+CKA-MedVQA Báocáonghiêncứu
+14. Năm câu hỏi cần nhóm và giảng viên chốt
+1. Ai đủ chuyên môn để phân biệt “tiền đề không được ảnh hỗ trợ” với “ảnh không đủ để
+biết”,vànguồnlựcreviewthựctếlàbaonhiêu?
+2. Nếusame-dataSFTngangCKA,nhómcóchấpnhậnkhóaluậnbenchmark/analysisthay
+vìnhấtthiếtmộtthuậttoánmớikhông?
+3. LàmsaochọnknowledgeQAmàcảảnhvàKđềucóvaitrò,nhưngkhôngbuộcmodelgiả
+vờkhôngbiếttrithứcđãhọctừpretraining?
+4. Khicảithiệnrobustnessđổilấygiảmcoverage,mứctrade-offnàođượccoilàthànhcông
+vàsẽđượcđăngkýtrướcrasao?
+5. Deadlinevàtrầnngânsáchhiệntạicóđủchonhãnđộclập,strongbaselinesvàexternal
+test,thayvìchỉđủchomộtlầnfine-tuningkhông?
+Phán quyết: tiếptụcPoCcóđiềukiện;chưaxácnhậnnoveltytuyệtđốihoặcmethodsuperi-
+ority. Giátrịhọcthuậtcaophảiđượctạobởimộtcâuhỏirõ,testđángtin,đốichiếupriorart
+mạnhvàkếtquảtáilập—khôngthểđượcbảođảmchỉtừýtưởngbanđầu.
+19

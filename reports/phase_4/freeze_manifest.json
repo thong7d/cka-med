@@ -1,0 +1,45 @@
+{
+  "frozen_at_bangkok": "2026-11-21T09:14:19+07:00",
+  "final_test_predictions_exist": false,
+  "test_run_dirs_found": [],
+  "protocol_sha256": "04954c138d3110d3a3d6a529b1813de64a764cf1330c67a29a99c067902f6906",
+  "dataset_manifest_sha256": "355f7e0ca85d62ee7085e2ea6e277b4d86604310f83eeca9802124c95d35069a",
+  "data_file_hashes": {
+    "train.jsonl": "cd3dca5e26fbe2150c61be86f1d1c58a642bd9392cca625865d0cbe806caa2fb",
+    "dev.jsonl": "e72f03078e4aa4a71ca46063a6ed7879a41cffacdfe2e0551cb40d44b044d5ae",
+    "test.jsonl": "0ff76000836a6e8fb365af38aa214f19f00f1af318fe565cf0d15c2efd9fa8a6",
+    "kg_subset.json": "d77fe1191d9d77af5fdd7462de6009991f5b83175613fd88c28c656d7fa21f4a"
+  },
+  "src_hashes": {
+    "cka_med/__init__.py": "03fff69ebc3aa9a654cf6662a6e1168569919e6ce9ff14e74b9a3b828b9548c6",
+    "cka_med/data/__init__.py": "613c73ec17676bbf5fc364d2c0d880805ac75e5821ceaf540bacd83185f85cf0",
+    "cka_med/data/audit.py": "f569df375085ed28cb97408c12752edca2e77d0ccf0e991ccbae6f1adb14fc81",
+    "cka_med/data/contexts.py": "87df38b53232559640ac91eeda6143adb16d86c50da320e970d6348ca33e824b",
+    "cka_med/data/filter.py": "dc927de8c72cc2936b0e1a86862347ac4b3219d0d8d0d70e23293bb6a871d9a8",
+    "cka_med/data/ingest.py": "cf0a01fabd1fa81e935ea4a4e7fd19f357e4ba142a65a463180da5ec473fd5e1",
+    "cka_med/data/prepare.py": "4ba83921716fbb87a65db95397bc3f963b693518129d74de107283ab799fedba",
+    "cka_med/evaluation/__init__.py": "f7795ee910a4e73df168acd5cb92d9c67d731f380eaa2060f52d6808b1435927",
+    "cka_med/evaluation/bootstrap.py": "8952921dc1d1e0131691b361e2ba91e29926b1eaad8bc47d80873d39b09c91f2",
+    "cka_med/evaluation/metrics.py": "a43305ae82076490844582a7641591607b4fa6732114fb9fc61769e9eb2c1288",
+    "cka_med/evaluation/run.py": "83cb026e07e117b208ed345ad98356be404b881aae6152d0baa717075914d5a8",
+    "cka_med/inference/__init__.py": "0b0230f947a816d95ba91def39d393d2b8c581f53d965813273f6fb072dc6529",
+    "cka_med/inference/prompts.py": "7d96f1673176b86ee8cef46ceb14b4291371d92c3b077d01957f3b69896a1403",
+    "cka_med/inference/qwen_runner.py": "32c5b55466d05060b5bb8a538f6af6f82a9c13c25571f4283c565f2a0008826d",
+    "cka_med/inference/run.py": "c7ccbb2ab2623a8c8032f574eac4fc6b0773a3946661e8c33edc61af62c3bd71",
+    "cka_med/inference/scoring.py": "3f06885271a9767a3b7ae6bbb673ef7e490a9b18533aceb369524347d5a77944",
+    "cka_med/manifest.py": "6d9bd099ddf24f02722ed0e2b978b138a8978bb7d90f5779dfaaace750849ca7",
+    "cka_med/schema.py": "a83a440dc41a6d6b3e3fe853f2c454078133489f3891cbaa4f9f27fe89d1c3c4",
+    "cka_med/training/__init__.py": "b6a4d56c50c7449032d2785d51adf5357c1ced8bc017669051c44613a615469e",
+    "cka_med/training/conditional.py": "82e69efff48aa320cf785d20203eab77be1edcb5a2be4f6b2b9d84fb38ef5ca1",
+    "cka_med/training/dataset.py": "fb8a7b6dc25940ae8b9db7bdf5f9e428ab6ba4625b19c5242800595ced7da5b2",
+    "cka_med/training/objectives.py": "f0181e43e49ff11c4ca9da42f98ab868ee76469c341725579e2897dcd56dc822",
+    "cka_med/training/sft.py": "ef69e70fb803f4c79e54c3757ddbb80995f9f98155ba6c0fe4eb62e137cb2c53",
+    "cka_med/training/trainer.py": "3fc84b0ce1fa6984354388bd7947e18be1a3bc0e74c0c5a928cd7375dbe011bf"
+  },
+  "config_hashes": {
+    "data.yaml": "04e4addfc609d5f1bf0b5b83ad5a6a3e7f61913dd6cbe57cb2f11c98978bae64",
+    "experiments/baselines.yaml": "2651d7d4658407f34b9888959248deb7217fd27c592a61df9579841832b1c4a7",
+    "experiments/conditional.yaml": "beb2be86d8521c5f7b739e3f09d91df24d39ac105e9873b79780b964011c2962",
+    "experiments/sft.yaml": "36669f5f6173241254f7ef3a425100f0aaa12e2f8825c62f6b8c751f989d0048"
+  }
+}

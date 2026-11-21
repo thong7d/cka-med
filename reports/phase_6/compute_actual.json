@@ -1,0 +1,26 @@
+{
+  "as_of_local": "2026-11-21 11:45 Asia/Bangkok",
+  "runner": "Modal NVIDIA L4 (torch.bfloat16)",
+  "paid_spend_usd": 0.0,
+  "modal_billing_summary": {
+    "baseline_metered_before_poc_usd": 19.91,
+    "ephemeral_apps_after_p6_usd": 24.38,
+    "poc_gpu_spend_usd": 4.47,
+    "volumes_usd": 0.67,
+    "billed_cost_usd": 0.0,
+    "remaining_free_credit_usd": 5.62
+  },
+  "poc_gpu_hours_equivalent_l4": 5.59,
+  "kaggle_gpu_hours_used_in_poc": 0.0,
+  "runs_wall_time_s": {
+    "p3_dev_baselines_and_profile": 959.3,
+    "B-S_seed42_train_plus_dev": 2172.5,
+    "M-C_lam05_seed42_train_plus_dev": 2264.5,
+    "M-C_lam20_seed42_train_plus_dev": 2203.2,
+    "A-U_seed42_train_plus_dev": 1953.6,
+    "B-S_seed43_train_plus_dev": 1954.8,
+    "M-C_lam05_seed43_train_plus_dev": 2144.6,
+    "p6_test_batch_a_baselines_and_seed42": 2641.8,
+    "p6_test_batch_b_au_and_seed43": 1378.0
+  }
+}

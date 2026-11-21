@@ -1,0 +1,21 @@
+{
+  "checked_date_local": "2026-11-16",
+  "source": "Kaggle MCP get_accelerator_quota",
+  "quota_refresh_time": "2026-11-21T00:00:00Z",
+  "gpu_quota": {
+    "time_used": "9774.150s",
+    "time_reserved": "0s",
+    "total_time_allowed": "108000s",
+    "minimum_time_allowed": "108000s",
+    "has_ever_run": true
+  },
+  "tpu_quota": {
+    "time_used": "0s",
+    "time_reserved": "0s",
+    "total_time_allowed": "72000s",
+    "minimum_time_allowed": "72000s"
+  },
+  "gpu_remaining_unreserved_hours": 27.284958333333336,
+  "quota_refresh_local": "2026-11-21 07:00 Asia/Bangkok",
+  "note": "Snapshot only; recheck before jobs. No GPU session started."
+}

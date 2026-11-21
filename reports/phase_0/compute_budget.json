@@ -1,0 +1,22 @@
+{
+  "as_of_local": "2026-11-21 08:35 Asia/Bangkok",
+  "kaggle_username": "phamtohng",
+  "kaggle_cli_status": "CONFIGURED_ACCESS_TOKEN",
+  "kaggle_snapshot_remaining_gpu_hours": 27.2849583333,
+  "kaggle_snapshot_date": "2026-11-16",
+  "kaggle_refresh_local": "2026-11-21 07:00 Asia/Bangkok",
+  "modal_profile": "thongpham796",
+  "modal_live_probe_status": "VERIFIED_FREE_CREDITS_AVAILABLE",
+  "modal_metered_cost_usd_used": 20.58,
+  "modal_ephemeral_credits_used_usd": 19.91,
+  "modal_free_storage_used_usd": 0.67,
+  "modal_billed_cost_usd": 0.0,
+  "modal_estimated_remaining_starter_credit_usd": 10.09,
+  "modal_gpu_l4_rate_usd_per_hr": 0.80,
+  "modal_gpu_t4_rate_usd_per_hr": 0.59,
+  "paid_spend_authorized_usd": 0,
+  "session_timeout_minutes": 40,
+  "eval_reserve_fraction": 0.30,
+  "training_allowed": true,
+  "note": "Modal Starter $30/mo credit has ~$10.09 remaining ($0.00 billed); Kaggle weekly 30h quota refreshed 2026-11-21 07:00 Asia/Bangkok."
+}

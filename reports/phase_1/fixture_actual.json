@@ -1,0 +1,245 @@
+{
+  "summary": {
+    "n_eligible_records": 20,
+    "n_unique_images": 4,
+    "missing_predictions": 0,
+    "incomplete_coverage": false,
+    "acc_0_v": 0.75,
+    "acc_near_v": 0.5,
+    "acc_irrel_v": 0.75,
+    "macro_f1_near_v": 0.3333333333333333,
+    "cfr_near_v": 0.3333333333333333,
+    "cfr_irrel_v": 0.0,
+    "acc_0_j": 0.25,
+    "acc_help_j": 0.75,
+    "kug": 0.5,
+    "kug_paired": 0.5,
+    "j_rescued_count": 2,
+    "j_harmed_count": 0
+  },
+  "condition_metrics": {
+    "J:K0": {
+      "task_type": "J",
+      "condition": "K0",
+      "n_eligible": 4,
+      "n_images": 2,
+      "correct": 1,
+      "accuracy": 0.25,
+      "missing": 0,
+      "invalid": 0,
+      "abstained": 0
+    },
+    "J:Khelp": {
+      "task_type": "J",
+      "condition": "Khelp",
+      "n_eligible": 4,
+      "n_images": 2,
+      "correct": 3,
+      "accuracy": 0.75,
+      "missing": 0,
+      "invalid": 0,
+      "abstained": 0
+    },
+    "V:K0": {
+      "task_type": "V",
+      "condition": "K0",
+      "n_eligible": 4,
+      "n_images": 2,
+      "correct": 3,
+      "accuracy": 0.75,
+      "missing": 0,
+      "invalid": 0,
+      "abstained": 0,
+      "binary_stats": {
+        "macro_f1": 0.7333333333333334,
+        "f1_yes": 0.8,
+        "f1_no": 0.6666666666666666,
+        "tp_yes": 2,
+        "fp_yes": 1,
+        "tn_no": 1,
+        "fn_yes": 0,
+        "invalid_or_missing_in_confusion": 0
+      }
+    },
+    "V:Kirrel": {
+      "task_type": "V",
+      "condition": "Kirrel",
+      "n_eligible": 4,
+      "n_images": 2,
+      "correct": 3,
+      "accuracy": 0.75,
+      "missing": 0,
+      "invalid": 0,
+      "abstained": 0,
+      "binary_stats": {
+        "macro_f1": 0.7333333333333334,
+        "f1_yes": 0.8,
+        "f1_no": 0.6666666666666666,
+        "tp_yes": 2,
+        "fp_yes": 1,
+        "tn_no": 1,
+        "fn_yes": 0,
+        "invalid_or_missing_in_confusion": 0
+      }
+    },
+    "V:Knear": {
+      "task_type": "V",
+      "condition": "Knear",
+      "n_eligible": 4,
+      "n_images": 2,
+      "correct": 2,
+      "accuracy": 0.5,
+      "missing": 0,
+      "invalid": 0,
+      "abstained": 0,
+      "binary_stats": {
+        "macro_f1": 0.3333333333333333,
+        "f1_yes": 0.6666666666666666,
+        "f1_no": 0.0,
+        "tp_yes": 2,
+        "fp_yes": 2,
+        "tn_no": 0,
+        "fn_yes": 0,
+        "invalid_or_missing_in_confusion": 0
+      }
+    }
+  },
+  "transitions": {
+    "J:K0->Khelp": {
+      "task_type": "J",
+      "condition": "Khelp",
+      "n_paired": 4,
+      "n_images": 2,
+      "z0_correct": 1,
+      "zk_correct": 3,
+      "both_correct": 1,
+      "both_wrong": 1,
+      "cfr_num": 0,
+      "cfr_den": 1,
+      "cfr": 0.0,
+      "lost_correct_rate": 0.0,
+      "harmful_wrong_flip_num": 0,
+      "harmful_wrong_flip_rate": 0.0,
+      "positive_flip_num": 2,
+      "positive_flip_rate": 0.5,
+      "acc_0": 0.25,
+      "acc_k": 0.75,
+      "delta_acc_k_minus_0": 0.5
+    },
+    "V:K0->Kirrel": {
+      "task_type": "V",
+      "condition": "Kirrel",
+      "n_paired": 4,
+      "n_images": 2,
+      "z0_correct": 3,
+      "zk_correct": 3,
+      "both_correct": 3,
+      "both_wrong": 1,
+      "cfr_num": 0,
+      "cfr_den": 3,
+      "cfr": 0.0,
+      "lost_correct_rate": 0.0,
+      "harmful_wrong_flip_num": 0,
+      "harmful_wrong_flip_rate": 0.0,
+      "positive_flip_num": 0,
+      "positive_flip_rate": 0.0,
+      "acc_0": 0.75,
+      "acc_k": 0.75,
+      "delta_acc_k_minus_0": 0.0
+    },
+    "V:K0->Knear": {
+      "task_type": "V",
+      "condition": "Knear",
+      "n_paired": 4,
+      "n_images": 2,
+      "z0_correct": 3,
+      "zk_correct": 2,
+      "both_correct": 2,
+      "both_wrong": 1,
+      "cfr_num": 1,
+      "cfr_den": 3,
+      "cfr": 0.3333333333333333,
+      "lost_correct_rate": 0.25,
+      "harmful_wrong_flip_num": 1,
+      "harmful_wrong_flip_rate": 0.25,
+      "positive_flip_num": 0,
+      "positive_flip_rate": 0.0,
+      "acc_0": 0.75,
+      "acc_k": 0.5,
+      "delta_acc_k_minus_0": -0.25
+    }
+  },
+  "bootstrap_4clusters": {
+    "n_replicates": 200,
+    "seed": 42,
+    "n_image_clusters": 4,
+    "comparator_model": null,
+    "models": {
+      "synthetic_model": {
+        "point_estimates": {
+          "acc_0_v": 0.75,
+          "acc_near_v": 0.5,
+          "acc_irrel_v": 0.75,
+          "cfr_near_v": 0.3333333333333333,
+          "cfr_irrel_v": 0.0,
+          "acc_0_j": 0.25,
+          "acc_help_j": 0.75,
+          "kug": 0.5
+        },
+        "ci_95": {
+          "acc_0_v": {
+            "mean": 0.7422839506172839,
+            "ci_low": 0.5,
+            "ci_high": 1.0,
+            "n_valid_replicates": 189
+          },
+          "acc_near_v": {
+            "mean": 0.5,
+            "ci_low": 0.5,
+            "ci_high": 0.5,
+            "n_valid_replicates": 189
+          },
+          "acc_irrel_v": {
+            "mean": 0.7422839506172839,
+            "ci_low": 0.5,
+            "ci_high": 1.0,
+            "n_valid_replicates": 189
+          },
+          "cfr_near_v": {
+            "mean": 0.2788737717309146,
+            "ci_low": 0.0,
+            "ci_high": 0.5,
+            "n_valid_replicates": 189
+          },
+          "cfr_irrel_v": {
+            "mean": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "n_valid_replicates": 189
+          },
+          "acc_0_j": {
+            "mean": 0.24696180555555555,
+            "ci_low": 0.0,
+            "ci_high": 0.5,
+            "n_valid_replicates": 192
+          },
+          "acc_help_j": {
+            "mean": 0.7469618055555557,
+            "ci_low": 0.5,
+            "ci_high": 1.0,
+            "n_valid_replicates": 192
+          },
+          "kug": {
+            "mean": 0.5,
+            "ci_low": 0.5,
+            "ci_high": 0.5,
+            "n_valid_replicates": 192
+          }
+        },
+        "undefined_cfr_near_replicates": 11,
+        "undefined_cfr_irrel_replicates": 11
+      }
+    },
+    "paired_deltas": {}
+  }
+}

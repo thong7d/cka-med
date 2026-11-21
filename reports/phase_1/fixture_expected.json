@@ -1,0 +1,12 @@
+{
+  "acc_0_v": 0.75,
+  "acc_near_v": 0.5,
+  "acc_irrel_v": 0.75,
+  "cfr_near_v": 0.3333333333333333,
+  "cfr_irrel_v": 0.0,
+  "acc_0_j": 0.25,
+  "acc_help_j": 0.75,
+  "kug": 0.5,
+  "j_rescued_count": 2,
+  "j_harmed_count": 0
+}

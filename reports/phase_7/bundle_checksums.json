@@ -1,0 +1,83 @@
+{
+  "data_manifests": {
+    "poc_v1.json": "355f7e0ca85d62ee7085e2ea6e277b4d86604310f83eeca9802124c95d35069a"
+  },
+  "configs": {
+    "data.yaml": "04e4addfc609d5f1bf0b5b83ad5a6a3e7f61913dd6cbe57cb2f11c98978bae64",
+    "experiments/baselines.yaml": "2651d7d4658407f34b9888959248deb7217fd27c592a61df9579841832b1c4a7",
+    "experiments/conditional.yaml": "beb2be86d8521c5f7b739e3f09d91df24d39ac105e9873b79780b964011c2962",
+    "experiments/sft.yaml": "36669f5f6173241254f7ef3a425100f0aaa12e2f8825c62f6b8c751f989d0048"
+  },
+  "src": {
+    "cka_med/__init__.py": "03fff69ebc3aa9a654cf6662a6e1168569919e6ce9ff14e74b9a3b828b9548c6",
+    "cka_med/data/__init__.py": "613c73ec17676bbf5fc364d2c0d880805ac75e5821ceaf540bacd83185f85cf0",
+    "cka_med/data/audit.py": "f569df375085ed28cb97408c12752edca2e77d0ccf0e991ccbae6f1adb14fc81",
+    "cka_med/data/contexts.py": "87df38b53232559640ac91eeda6143adb16d86c50da320e970d6348ca33e824b",
+    "cka_med/data/filter.py": "dc927de8c72cc2936b0e1a86862347ac4b3219d0d8d0d70e23293bb6a871d9a8",
+    "cka_med/data/ingest.py": "cf0a01fabd1fa81e935ea4a4e7fd19f357e4ba142a65a463180da5ec473fd5e1",
+    "cka_med/data/prepare.py": "4ba83921716fbb87a65db95397bc3f963b693518129d74de107283ab799fedba",
+    "cka_med/evaluation/__init__.py": "f7795ee910a4e73df168acd5cb92d9c67d731f380eaa2060f52d6808b1435927",
+    "cka_med/evaluation/bootstrap.py": "8952921dc1d1e0131691b361e2ba91e29926b1eaad8bc47d80873d39b09c91f2",
+    "cka_med/evaluation/metrics.py": "a43305ae82076490844582a7641591607b4fa6732114fb9fc61769e9eb2c1288",
+    "cka_med/evaluation/run.py": "83cb026e07e117b208ed345ad98356be404b881aae6152d0baa717075914d5a8",
+    "cka_med/inference/__init__.py": "0b0230f947a816d95ba91def39d393d2b8c581f53d965813273f6fb072dc6529",
+    "cka_med/inference/prompts.py": "7d96f1673176b86ee8cef46ceb14b4291371d92c3b077d01957f3b69896a1403",
+    "cka_med/inference/qwen_runner.py": "32c5b55466d05060b5bb8a538f6af6f82a9c13c25571f4283c565f2a0008826d",
+    "cka_med/inference/run.py": "c7ccbb2ab2623a8c8032f574eac4fc6b0773a3946661e8c33edc61af62c3bd71",
+    "cka_med/inference/scoring.py": "3f06885271a9767a3b7ae6bbb673ef7e490a9b18533aceb369524347d5a77944",
+    "cka_med/manifest.py": "6d9bd099ddf24f02722ed0e2b978b138a8978bb7d90f5779dfaaace750849ca7",
+    "cka_med/schema.py": "a83a440dc41a6d6b3e3fe853f2c454078133489f3891cbaa4f9f27fe89d1c3c4",
+    "cka_med/training/__init__.py": "b6a4d56c50c7449032d2785d51adf5357c1ced8bc017669051c44613a615469e",
+    "cka_med/training/conditional.py": "82e69efff48aa320cf785d20203eab77be1edcb5a2be4f6b2b9d84fb38ef5ca1",
+    "cka_med/training/dataset.py": "fb8a7b6dc25940ae8b9db7bdf5f9e428ab6ba4625b19c5242800595ced7da5b2",
+    "cka_med/training/objectives.py": "f0181e43e49ff11c4ca9da42f98ab868ee76469c341725579e2897dcd56dc822",
+    "cka_med/training/sft.py": "ef69e70fb803f4c79e54c3757ddbb80995f9f98155ba6c0fe4eb62e137cb2c53",
+    "cka_med/training/trainer.py": "544c16a4e3554174496bf193570e5681b88356c97cbb3336fa7a9061fc805b45"
+  },
+  "reports_phase_4": {
+    "dataset_manifest.json": "355f7e0ca85d62ee7085e2ea6e277b4d86604310f83eeca9802124c95d35069a",
+    "freeze_manifest.json": "22693ab4881913f22d96e0c4020c215ee6f688e5112c9d82479cfe899cf71930",
+    "protocol_v1.md": "55a6a5d4905d4fdd5946efdbc735e1ef530cfd88ca5e6e148c2763fdfa9ec684",
+    "protocol_v1.yaml": "04954c138d3110d3a3d6a529b1813de64a764cf1330c67a29a99c067902f6906",
+    "run_matrix.csv": "8193c975d892d3c3c2302266fad9fcabb5b5c75ffd0b4c9aa524edb35382e2b5",
+    "selection_rules.md": "02ec8743327d760d15cf04a97c22b87f231e9f7d6568be4c2328b8fd643506da",
+    "SUBMISSION.md": "21be50f31910f8c81b4bf67a41ac7bf62920ed98484cdb963e2bb9fa92ee8971"
+  },
+  "reports_phase_6": {
+    "compute_actual.json": "99fab23719c8351910919cd7f01859bd198053e27c1adc70a46e3e15ada20098",
+    "confidence_intervals.json": "008a2115f159eabcd521f12639da6b64b96f0fcfcdd29584c43b7aa27fafcddf",
+    "error_inventory.csv": "b5de49aa105f620dc51e1f6dbbf35c98bebf013649b987d535e6a65a31aa238c",
+    "figures/final_test_tradeoff.png": "398aa53d7fd4360d9eadf11f401e3217313e3a39c3790081b4f3bec99791e847",
+    "final_access_log.md": "a01e0173b411c76bfeb28acea20fb086d21c83a0ba40643db68f65eda216ab59",
+    "main_results.csv": "f656b1ad4fb3e67f560a662aee2de844d5f0147657abcbc0a88314d588d05bda",
+    "paired_deltas.csv": "c80dc08fd9027ac940320463f35d7b31389aabab10aad330c144f0acc443b237",
+    "stress_results.csv": "607b60170ad14d799be54713ec20171548dbed0a2b703c23e065d97a15e080d7",
+    "SUBMISSION.md": "408ab47b51de008f0d5de81a02c77f06e2ca69f3a5717a7fe949c6c0e92ec738",
+    "transitions.csv": "459025fa563441dd5908961b04cf24d874f4fc64b105646488150cfcb2884158"
+  },
+  "test_predictions": {
+    "A-U_seed42_test": "0a0cabc1e2872726d94fc5a085a6627251690de23f39e5d54a7993682e65dff6",
+    "B-F_test": "a478d067cca5e9fd13c06a66ed7887c7a2f0edf48272fc02b9735e2d1d0432f6",
+    "B-N_test": "31545c03ab9bc3dd2aa6511a41a439f9d73f9b229dd12369acd06765a49b50a2",
+    "B-P_v1_test": "b66904f85bf206e082503ae216285a61a61e6342950bb551a3df17bd19ea30cf",
+    "B-R_test": "acb97c79fe4a9ef4ae5ddcc1ebba544624e42b7bf99e034f708578b641173d06",
+    "B-S_seed42_test": "a616a8e21b8ed57c8b08e80f8f0d811175e738ee2eae7c2ede3af1c6893dcd07",
+    "B-S_seed42_test_stress": "8eeacc0d6013d4a67a4fef8e0ddcb91da0a1071356fa535430846b0ac17923e0",
+    "B-S_seed43_test": "9deec46abf45761983f7e44c941248363e7d13af0706fa6b86969cf3a033c6a3",
+    "B-S_seed43_test_stress": "541ace60abae919ef509b816542142b4747f11482c184f8a262e0ba0290a2eb3",
+    "D-K_test": "4dbb343693feccc91ab7f0b6fb368dee713ab1a8c4f219e2c0b070b221e05f7a",
+    "D-Q_test": "203b75d6dea7cc1a3b45010ee0561aa50ab0f83e3231a14c3ef7f94acae3756e",
+    "M-C_lam05_seed42_test": "4661f617ab721f2a2975302514669573ca7fa9948aa3f8eace4c53dfb75fad2f",
+    "M-C_lam05_seed42_test_stress": "44d09603f53c63981b99d4ba0ea5fd48e3d4c197c4bfdec79a50439efde856f2",
+    "M-C_lam05_seed43_test": "811d94d79da61082da1928fe6c92a1d8ae6f33b62b0bf4f91ded3181e40e7747"
+  },
+  "adapters": {
+    "A-U_seed42": "68476500e2d5dae9c664ed0c74ef1eb9b3c7e8af23613df6b5bf2afaaff1eb09",
+    "B-S_seed42": "8083eef647e4367575dbff657a575276e50cc530f8f705f8d4d5a0fd85ca0490",
+    "B-S_seed43": "8fa16c98051f35b53e4c5b31c37ad4576481e405a298215256c80f5d05ee7829",
+    "M-C_lam05_seed42": "fe690e2c85ae1a589a2e6a1c9ae84c3653b416a8bd77beb34de8dc43e8c2c927",
+    "M-C_lam05_seed43": "3971b7964505d88b790ae5fe949e0da7194c43d3dad77a6a2183332ee45b2e87",
+    "M-C_lam20_seed42": "1116868169830bf43d40ae11f26c90f9ce84c6181a5e293798ef109312a06bc5",
+    "P3_profile_train_10steps": "3b61a62ff77d336fd35eeda6ed4a3a429dbba1495782d7b89fbf226794508bcc"
+  }
+}

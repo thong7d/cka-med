@@ -1,0 +1,108 @@
+{
+  "manifest_version": "poc_v1",
+  "created_at_bangkok": "2026-11-21T08:41:49+07:00",
+  "seed": 42,
+  "source_dataset": "BoKelvin/SLAKE",
+  "source_revision": "a9083ce6c34ac3ffb17671a605962924d8a8f9e9",
+  "context_generator_version": "cka_ctx_v1",
+  "train_j_vocab": [
+    "absorb nutrients, secrete enzymes, digest food",
+    "biotransformation, detoxification",
+    "bladder",
+    "brain",
+    "breathe",
+    "colon",
+    "colon, small bowel",
+    "control heartbeat and breathing",
+    "cutting, chewing, maintaining facial contour and assisting pronunciation",
+    "digest food, secrete enzymes",
+    "esophagus",
+    "gas delivery",
+    "heart",
+    "improve the body's immunity",
+    "kidney",
+    "larynx",
+    "lung",
+    "no",
+    "parotid",
+    "participate in hearing, speech and memory",
+    "promote blood flow",
+    "rectum",
+    "rectum, small bowel",
+    "respiratory system",
+    "small bowel, colon",
+    "small bowel, duodenum",
+    "small bowel, rectum",
+    "spinal cord",
+    "stomach",
+    "stomach, colon",
+    "storage of urine",
+    "store feces, excrete feces",
+    "store urine",
+    "tooth",
+    "trachea",
+    "ventilation, pronunciation",
+    "yes"
+  ],
+  "kg_subset_path": "data/processed/kg_subset.json",
+  "kg_subset_sha256": "d77fe1191d9d77af5fdd7462de6009991f5b83175613fd88c28c656d7fa21f4a",
+  "kg_subset_entries": 69,
+  "split_dedup_audit_path": "data/processed/split_dedup_audit.json",
+  "exclusions_csv_path": "data/processed/exclusions.csv",
+  "exclusions_count": 6248,
+  "files": {
+    "train": "data/processed/train.jsonl",
+    "dev": "data/processed/dev.jsonl",
+    "test": "data/processed/test.jsonl"
+  },
+  "splits": {
+    "train": {
+      "n_records": 1560,
+      "n_groups": 520,
+      "n_v_groups": 360,
+      "n_j_groups": 160,
+      "n_unique_images": 283,
+      "n_cxr_groups": 153,
+      "n_cxr_images": 90,
+      "conditions": {
+        "K0": 520,
+        "Kirrel": 520,
+        "Knear": 360,
+        "Khelp": 160
+      },
+      "file_sha256": "cd3dca5e26fbe2150c61be86f1d1c58a642bd9392cca625865d0cbe806caa2fb"
+    },
+    "dev": {
+      "n_records": 315,
+      "n_groups": 105,
+      "n_v_groups": 70,
+      "n_j_groups": 35,
+      "n_unique_images": 50,
+      "n_cxr_groups": 57,
+      "n_cxr_images": 23,
+      "conditions": {
+        "K0": 105,
+        "Kirrel": 105,
+        "Knear": 70,
+        "Khelp": 35
+      },
+      "file_sha256": "e72f03078e4aa4a71ca46063a6ed7879a41cffacdfe2e0551cb40d44b044d5ae"
+    },
+    "test": {
+      "n_records": 480,
+      "n_groups": 160,
+      "n_v_groups": 115,
+      "n_j_groups": 45,
+      "n_unique_images": 63,
+      "n_cxr_groups": 112,
+      "n_cxr_images": 30,
+      "conditions": {
+        "K0": 160,
+        "Kirrel": 160,
+        "Knear": 115,
+        "Khelp": 45
+      },
+      "file_sha256": "0ff76000836a6e8fb365af38aa214f19f00f1af318fe565cf0d15c2efd9fa8a6"
+    }
+  }
+}

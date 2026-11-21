@@ -1,0 +1,757 @@
+{
+  "generator_version": "cka_ctx_v1",
+  "organ_rel_entries": [
+    {
+      "entry_id": "en_organ_rel#4",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 4,
+      "subject": "Spine",
+      "attribute": "belong to",
+      "value": "Motor System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#6",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 6,
+      "subject": "Tooth",
+      "attribute": "belong to",
+      "value": "Digestive System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#13",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 13,
+      "subject": "Esophagus",
+      "attribute": "belong to",
+      "value": "Digestive System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#14",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 14,
+      "subject": "Stomach",
+      "attribute": "belong to",
+      "value": "Digestive System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#15",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 15,
+      "subject": "Small Intestine",
+      "attribute": "belong to",
+      "value": "Digestive System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#20",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 20,
+      "subject": "Liver",
+      "attribute": "belong to",
+      "value": "Digestive System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#27",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 27,
+      "subject": "Larynx",
+      "attribute": "belong to",
+      "value": "Respiratory System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#28",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 28,
+      "subject": "Trachea",
+      "attribute": "belong to",
+      "value": "Respiratory System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#29",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 29,
+      "subject": "Bronchial Tube",
+      "attribute": "belong to",
+      "value": "Respiratory System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#30",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 30,
+      "subject": "Lung",
+      "attribute": "belong to",
+      "value": "Respiratory System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#31",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 31,
+      "subject": "Diaphragm",
+      "attribute": "belong to",
+      "value": "Respiratory System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#32",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 32,
+      "subject": "Kidney",
+      "attribute": "belong to",
+      "value": "Urinary System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#34",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 34,
+      "subject": "Bladder",
+      "attribute": "belong to",
+      "value": "Urinary System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#35",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 35,
+      "subject": "Rectum",
+      "attribute": "belong to",
+      "value": "Digestive System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#36",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 36,
+      "subject": "Colon",
+      "attribute": "belong to",
+      "value": "Digestive System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#60",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 60,
+      "subject": "Heart",
+      "attribute": "belong to",
+      "value": "Circulatory System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#61",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 61,
+      "subject": "Artery",
+      "attribute": "belong to",
+      "value": "Circulatory System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#62",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 62,
+      "subject": "Vein",
+      "attribute": "belong to",
+      "value": "Circulatory System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#67",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 67,
+      "subject": "Thymus",
+      "attribute": "belong to",
+      "value": "Lymphatic System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#68",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 68,
+      "subject": "Spleen",
+      "attribute": "belong to",
+      "value": "Lymphatic System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#72",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 72,
+      "subject": "Brain",
+      "attribute": "belong to",
+      "value": "Nervous System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#80",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 80,
+      "subject": "Spinal Cord",
+      "attribute": "belong to",
+      "value": "Nervous System",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#86",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 86,
+      "subject": "Eye",
+      "attribute": "belong to",
+      "value": "Sense Organ",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ_rel#87",
+      "source_file": "KG/en_organ_rel.csv",
+      "source_row": 87,
+      "subject": "Ear",
+      "attribute": "belong to",
+      "value": "Sense Organ",
+      "verification": "source_asserted"
+    }
+  ],
+  "organ_func_entries": [
+    {
+      "entry_id": "en_organ#16",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 16,
+      "subject": "Tooth",
+      "attribute": "definition",
+      "value": "organs of human and higher animals chewing food",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#18",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 18,
+      "subject": "Tooth",
+      "attribute": "effect",
+      "value": "cutting, chewing, maintaining facial contour and assisting pronunciation",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#26",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 26,
+      "subject": "Esophagus",
+      "attribute": "definition",
+      "value": "a passage made up of muscles",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#28",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 28,
+      "subject": "Esophagus",
+      "attribute": "effect",
+      "value": "food delivery",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#29",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 29,
+      "subject": "Stomach",
+      "attribute": "function",
+      "value": "digest food, secrete enzymes",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#33",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 33,
+      "subject": "Small Intestine",
+      "attribute": "function",
+      "value": "absorb nutrients, secrete enzymes, digest food",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#43",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 43,
+      "subject": "Colon",
+      "attribute": "definition",
+      "value": "an important component of the digestive system",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#44",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 44,
+      "subject": "Colon",
+      "attribute": "function",
+      "value": "digest food, absorb water, excrete body waste",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#45",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 45,
+      "subject": "Rectum",
+      "attribute": "definition",
+      "value": "the last section of the bowel",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#46",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 46,
+      "subject": "Rectum",
+      "attribute": "function",
+      "value": "store feces, excrete feces",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#47",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 47,
+      "subject": "Liver",
+      "attribute": "definition",
+      "value": "an organ in the body that has a predominant metabolic function",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#51",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 51,
+      "subject": "Liver",
+      "attribute": "function",
+      "value": "biotransformation, detoxification",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#68",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 68,
+      "subject": "Larynx",
+      "attribute": "function",
+      "value": "ventilation, pronunciation",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#73",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 73,
+      "subject": "Trachea",
+      "attribute": "function",
+      "value": "gas delivery",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#77",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 77,
+      "subject": "Lung",
+      "attribute": "function",
+      "value": "breathe",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#86",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 86,
+      "subject": "Kidney",
+      "attribute": "function",
+      "value": "discharge waste, adjust water and osmotic pressure balance",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#93",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 93,
+      "subject": "Bladder",
+      "attribute": "definition",
+      "value": "urinary storage organs",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#95",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 95,
+      "subject": "Bladder",
+      "attribute": "function",
+      "value": "store urine",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#169",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 169,
+      "subject": "Heart",
+      "attribute": "function",
+      "value": "promote blood flow",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#188",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 188,
+      "subject": "Spleen",
+      "attribute": "function",
+      "value": "improve the body's immunity",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#200",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 200,
+      "subject": "Brain",
+      "attribute": "definition",
+      "value": "the most advanced part of the nervous system",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#201",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 201,
+      "subject": "Brain",
+      "attribute": "function",
+      "value": "organs of thinking, regulating all activities in the body",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#237",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 237,
+      "subject": "Eye",
+      "attribute": "effect",
+      "value": "sensing light",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_organ#240",
+      "source_file": "KG/en_organ.csv",
+      "source_row": 240,
+      "subject": "Ear",
+      "attribute": "function",
+      "value": "receive sound",
+      "verification": "source_asserted"
+    }
+  ],
+  "disease_entries": [
+    {
+      "entry_id": "en_disease#23",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        23,
+        24,
+        27
+      ],
+      "subject": "Lobar Pneumonia",
+      "topic": "Lung",
+      "attribute": "reference_note",
+      "value": "also known as pneumococcal pneumonia, is a lobar distribution of acute lung inflammation caused by bacterial infections such as diplococcus pneumoniae.",
+      "symptom": "chills, high fever, chest pain, cough, rusty sputum, nausea, vomiting",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#31",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        31,
+        32,
+        35
+      ],
+      "subject": "Pulmonary Actinomycosis",
+      "topic": "Lung",
+      "attribute": "reference_note",
+      "value": "pulmonary actinomycosis chronic pyogenic granulomatous disease caused by anaerobic israeli actinomycetes infecting the lungs",
+      "symptom": "low or irregular fever, cough, cough up a small amount of mucous sputum",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#45",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        45,
+        46,
+        49
+      ],
+      "subject": "Pulmonary Candidiasis",
+      "topic": "Lung",
+      "attribute": "reference_note",
+      "value": "pulmonary candidiasis is an acute, subacute, or chronic bronchial and pulmonary infection caused by candida spp",
+      "symptom": "cough, cough up a small amount of mucous sputum",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#186",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        186,
+        187,
+        189
+      ],
+      "subject": "Single Ventricle",
+      "topic": "Heart",
+      "attribute": "reference_note",
+      "value": "single ventricle is a rare congenital malformation.",
+      "symptom": "cyanosis, tachycardia, slow weight gain",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#194",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        194,
+        195,
+        197
+      ],
+      "subject": "Single Atrium",
+      "topic": "Heart",
+      "attribute": "reference_note",
+      "value": "a single atrium is a rare congenital heart disease caused by the absence of the first and second septums of the atrial septum during embryonic development.",
+      "symptom": "be short of breath and cyanotic when crying",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#215",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        215,
+        216,
+        219
+      ],
+      "subject": "Mitral Insufficiency",
+      "topic": "Heart",
+      "attribute": "reference_note",
+      "value": "mitral insufficiency is defined as partial return of blood from the left ventricle to the left atrium during left ventricular contraction due to abnormal anatomy and function of the mitral valve.",
+      "symptom": "weakness, palpitations, chest pain, exertional dyspnea, orthopnea",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#332",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        332,
+        333,
+        336
+      ],
+      "subject": "Amiba Hepatic Abscess",
+      "topic": "Liver",
+      "attribute": "reference_note",
+      "value": "amiba hepatic abscess is caused by histolytic amoeba trophozoites entering the liver via blood flow from intestinal lesions, causing necrosis of the liver.",
+      "symptom": "long-term fever, right upper abdomen or right lower chest pain, liver swelling tenderness, leukocytosis",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#387",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        387,
+        388,
+        391
+      ],
+      "subject": "Hepatic Fibrosis",
+      "topic": "Liver",
+      "attribute": "reference_note",
+      "value": "liver fibrosis is a pathophysiological process, which refers to the abnormal proliferation of connective tissue in the liver caused by various pathogenic factors.",
+      "symptom": "weakness, loss of appetite, dyspepsia, hepatic hemorrhage, etc.",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#395",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        395,
+        396,
+        399
+      ],
+      "subject": "Hepatic Abscess",
+      "topic": "Liver",
+      "attribute": "reference_note",
+      "value": "liver abscess is a suppurative lesion of the liver caused by a variety of microorganisms, such as bacteria, fungi or histolytic amoeba protozoa.",
+      "symptom": "high fever, liver pain, chills, fatigue",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#456",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        456,
+        457,
+        460
+      ],
+      "subject": "Splenic Rupture",
+      "topic": "Spleen",
+      "attribute": "reference_note",
+      "value": "the spleen is a substantial organ with abundant blood supply and brittle substance, which is easily ruptured by traumatic violence and causes internal hemorrhage.",
+      "symptom": "left upper abdominal pain, worsened by deep breathing",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#479",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        479,
+        480,
+        483
+      ],
+      "subject": "Gastric Cancer",
+      "topic": "Stomach",
+      "attribute": "reference_note",
+      "value": "gastric cancer is a malignant tumor originating from gastric mucosal epithelium",
+      "symptom": "upper abdominal pain, loss of appetite, emaciation",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#487",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        487,
+        489,
+        492
+      ],
+      "subject": "Gastrocardiac Syndrome",
+      "topic": "Stomach",
+      "attribute": "reference_note",
+      "value": "refers to functional disorders of the cardiovascular system caused by reflexive gastric disease.",
+      "symptom": "precordial discomfort or dull pain, or angina, chest tightness and shortness of breath",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#569",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        569,
+        570,
+        573
+      ],
+      "subject": "Polycystic Kidney",
+      "topic": "Kidney",
+      "attribute": "reference_note",
+      "value": "polycystic kidneys are numerous cysts of varying sizes in the renal parenchyma, which enlarge the whole renal volume.",
+      "symptom": "kidney enlargement, renal pain, hematuria, hypertension",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#591",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        591,
+        592,
+        595
+      ],
+      "subject": "Renal Injury",
+      "topic": "Kidney",
+      "attribute": "reference_note",
+      "value": "kidney injury is mostly caused by firearm injury, stabbing injury and local direct or indirect violence.",
+      "symptom": "shock, urinary extravasation",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#598",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        598,
+        599,
+        601
+      ],
+      "subject": "Renal Cyst",
+      "topic": "Kidney",
+      "attribute": "reference_note",
+      "value": "cystic lesions in the kidney that are not related to the outside world",
+      "symptom": "intermittent dull pain in the waist, abdomen and back",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#628",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        628,
+        629,
+        632
+      ],
+      "subject": "Alzheimer Disease",
+      "topic": "Brain",
+      "attribute": "reference_note",
+      "value": "alzheimer's disease is dementia caused by chronic progressive central nervous system degeneration",
+      "symptom": "decreased cognitive function, behavioral disorders, and ability to live gradually",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#637",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        637,
+        638,
+        641
+      ],
+      "subject": "Transient Ischemic Attack",
+      "topic": "Brain",
+      "attribute": "reference_note",
+      "value": "transient ischemic attack (tia) is a transient disorder of brain function caused by insufficient blood supply in a region.",
+      "symptom": "transient aphasia, paralysis, sensory disturbance",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#652",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        652,
+        653,
+        656
+      ],
+      "subject": "Cerebral Hemorrhage",
+      "topic": "Brain",
+      "attribute": "reference_note",
+      "value": "it refers to spontaneous hemorrhage in non-traumatic brain parenchyma with various causes, most of which are caused by vascular rupture of hypertensive arteriolosclerosis.",
+      "symptom": "coma, partial loss of speech function, brain death, sensory impairment",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#840",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        840,
+        841,
+        844
+      ],
+      "subject": "Congestive Splenomegaly",
+      "topic": "Spleen",
+      "attribute": "reference_note",
+      "value": "congestive splenomegaly is an inflammation or thrombosis of the portal hypertension, portal vein or splenic vein caused by cirrhosis of the liver.",
+      "symptom": "splenomegaly, ascites, portal hypertension",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#847",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        847,
+        848,
+        851
+      ],
+      "subject": "Ankylosing Spondylitis",
+      "topic": "Spine",
+      "attribute": "reference_note",
+      "value": "ankylosing spondylitis is a chronic progressive inflammatory disease that mainly invades the spine and can involve sacroiliac and peripheral joints to varying degrees.",
+      "symptom": "lumbosacral lesions are particularly prominent in the spine",
+      "verification": "source_asserted"
+    },
+    {
+      "entry_id": "en_disease#915",
+      "source_file": "KG/en_disease.csv",
+      "source_rows": [
+        915,
+        916,
+        919
+      ],
+      "subject": "Spina Bifida",
+      "topic": "Spine",
+      "attribute": "reference_note",
+      "value": "a common congenital malformation of spina bifida.",
+      "symptom": "spinal canal defect, cyst",
+      "verification": "source_asserted"
+    }
+  ],
+  "total_entries": 69
+}

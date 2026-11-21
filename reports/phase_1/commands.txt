@@ -1,0 +1,4 @@
+D:\000MINHTHONG\Graduation Thesis\experiments\CKA-Med\.venv\Scripts\python.exe -m pytest -v
+D:\000MINHTHONG\Graduation Thesis\experiments\CKA-Med\.venv\Scripts\python.exe -m cka_med.data.prepare --config configs/data.yaml
+D:\000MINHTHONG\Graduation Thesis\experiments\CKA-Med\.venv\Scripts\python.exe -m cka_med.data.audit --manifest data/manifests/poc_v1.json
+D:\000MINHTHONG\Graduation Thesis\experiments\CKA-Med\.venv\Scripts\python.exe -m cka_med.evaluation.run --help

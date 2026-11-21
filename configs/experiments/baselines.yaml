@@ -1,0 +1,40 @@
+base_model_id: Qwen/Qwen2.5-VL-3B-Instruct
+base_model_revision: 66285546d2b821cf421d4f5eb2576359d3770cd3
+seed: 42
+min_pixels: 200704
+max_pixels: 401408
+use_4bit: false
+data_manifest_path: data/manifests/poc_v1.json
+output_dir: artifacts/runs
+
+data_files:
+  train: data/processed/train.jsonl
+  dev: data/processed/dev.jsonl
+  test: data/processed/test.jsonl
+
+runs:
+  - run_id: D-Q
+    model_label: D-Q
+    mode: D-Q
+    task_filter: ["J"]
+  - run_id: D-K
+    model_label: D-K
+    mode: D-K
+    task_filter: ["J"]
+  - run_id: B-N
+    model_label: B-N
+    mode: B-N
+  - run_id: B-R
+    model_label: B-R
+    mode: B-R
+  - run_id: B-P_v1
+    model_label: B-P_v1
+    mode: B-P
+    prompt_variant: default
+  - run_id: B-P_v2
+    model_label: B-P_v2
+    mode: B-P
+    prompt_variant: v2
+  - run_id: B-F
+    model_label: B-F
+    mode: B-F

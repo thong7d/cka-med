@@ -1,0 +1,234 @@
+=== ppt/slides/slide1.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     01 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+Chưa có kết quả thực nghiệm CKA
+ĐỀ XUẤT KHÓA LUẬN  •  HƯỚNG RESEARCH
+TRI THỨC Y KHOA
+KHÔNG ĐƯỢC LẤN ÁT
+BẰNG CHỨNG HÌNH ẢNH
+Conditional Knowledge Alignment for Evidence-Grounded Medical Visual Question Answering
+CKA-MedVQA
+NHÓM 02 THÀNH VIÊN
+Nguyễn Trịnh Quang •  
+Phạm
+ Minh Thông
+INPUT
+ẢNH + CÂU 
+HỎI
+TRI THỨC
+CKA
+CÂU TRẢ LỜI CÓ CĂN CỨ
+=== ppt/slides/slide2.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     02 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+Chưa có kết quả thực nghiệm CKA
+BỐI CẢNH & ĐỘNG LỰC
+Tri thức giúp VLM trả lời — nhưng chưa đủ an toàn
+Y tế cần câu trả lời đúng với từng ảnh, không chỉ đúng về 
+mặt
+ 
+kiếfn
+ thức tổng quát.
+BẰNG CHỨNG NGHIÊN CỨU
++4,16%
++4,50%
+SLAKE
+VQA-RAD
+MedKInstruct (2026): mức cải thiện được báo cáo khi tăng cường tri thức.
+VẤN ĐỀ CÒN LẠI
+ẢNH
+TRI THỨC
+SAI?
+DEPO & MCR đã chỉ ra các dạng lệch giữa văn bản, hình ảnh và suy luận.
+Nguồn: MedKInstruct (2026), abstract; DEPO (2026); Act as You Think (2026). Số liệu không phải kết quả của CKA.
+=== ppt/slides/slide3.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     03 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+Chưa có kết quả thực nghiệm CKA
+FAILURE MODE
+Tri 
+thức
+ 
+đúng
+ vẫn có thể dẫn 
+đến
+ 
+đáp
+ 
+án
+ 
+sai
+Một quan hệ y khoa tổng quát không chứng minh bệnh nhân này có dấu hiệu đó.
+BẰNG CHỨNG TỪ ẢNH
+Chưa đủ dấu hiệu để xác nhận tràn dịch.
+TRI THỨC TỔNG QUÁT
+Suy tim có thể gây tràn dịch màng phổi.
+LỖI: kết luận “có tràn dịch” chỉ từ quan hệ “có thể gây”
+MONG MUỐN: không khẳng định khi ảnh chưa đủ bằng chứng
+Tình huống giả định nhằm minh họa lỗi suy luận; hình X-quang được vẽ cách điệu, không phải ảnh bệnh nhân.
+=== ppt/slides/slide4.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     04 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+Chưa có kết quả thực nghiệm CKA
+RESEARCH GAP
+Khi 
+nào
+ 
+nên
+ 
+dùng
+ Knowledge Graph
+RỦI RO 1
+LUÔN TIN TRI THỨC
+→ Dễ suy diễn ngoài bằng chứng ảnh
+Knowledge overrides visual evidence
+RỦI RO 2
+LUÔN BỎ QUA TRI THỨC
+→ Không trả lời tốt câu hỏi cần tri thức
+Nghiệm suy biến — không đạt mục tiêu
+RESEARCH QUESTION: Khi nào tri thức được 
+phép
+ 
+kết
+ 
+hợp
+ 
+với
+ 
+câu
+ 
+trả
+ 
+lời
+ 
+được
+ 
+suy
+ 
+ra
+ từ ảnh?
+=== ppt/slides/slide5.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     05 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+Chưa có kết quả thực nghiệm CKA
+Ý TƯỞNG PHƯƠNG PHÁP
+CKA học cách chọn vai trò của tri thức
+Điều kiện hóa theo loại câu hỏi và mức độ bằng chứng của từng ảnh.
+Ảnh  +  Câu hỏi  +  Tri thức
+CKA  ·  Conditional Alignment
+CÂU HỎI THUẦN THỊ GIÁC
+Đáp án dựa trên ảnh không bị KG gây nhiễu làm sai.
+CÂU HỎI CẦN TRI THỨC
+Tri thức phù hợp giúp bổ sung lập luận còn thiếu.
+Thiếu bằng chứng  →  trả lời có giới hạn / 
+từ
+ 
+chối
+ 
+đưa
+ 
+ra
+ kết luận
+Đây là giả thuyết phương pháp; chưa có kết quả để khẳng định CKA hiệu quả hơn baseline.
+=== ppt/slides/slide6.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     06 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+Chưa có kết quả thực nghiệm CKA
+Một pipeline rõ ràng, không phụ thuộc KG quy mô lớn
+Tách bằng chứng hình ảnh khỏi tri 
+thức
+ 
+bên
+ 
+ngoài
+, rồi căn chỉnh có điều kiện.
+VISUAL INPUT
+Ảnh + câu hỏi
+KNOWLEDGE
+Clinical KG
+Visual Evidence
+KG Retrieval
+CORE METHOD
+Conditional Knowledge Alignment
+Medical VLM
+(~3B + QLoRA)
+OUTPUT
+Trả lời
+Trạng thái
+bằng chứng
+KIẾN TRÚC TỔNG THỂ
+=== ppt/slides/slide7.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     07 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+CÁC TRƯỜNG HỢP XUNG ĐỘT
+Mỗi câu hỏi → nhiều 
+tình
+ 
+huống
+ tri 
+thức
+Tạo nhóm can thiệp: giữ nguyên ảnh/câu hỏi, chỉ thay thông tin bổ sung.
+CỐ ĐỊNH
+Ảnh I
+Câu hỏi q
+K⁺
+Hữu ích, phù hợp
+Dùng khi cần
+Kᵈ
+Đúng nhưng gây nhiễu
+Không để lấn át ảnh
+K⁻
+Giả định phản thực
+Nhận diện / kháng nhiễu
+=== ppt/slides/slide8.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     08 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+Chưa có kết quả thực nghiệm CKA
+ĐÁNH GIÁ & PHẢN CHỨNG
+Phải cải thiện đồng thời hai phía
+CFR thấp không đủ nếu mô hình học cách bỏ qua KG hoàn toàn.
+METRIC 01 · ROBUSTNESS
+CFR  ↓
+Tỷ lệ đáp án đúng → sai khi đưa tri thức gây nhiễu.
+METRIC 02 · UTILITY
+KUG  ↑
+Mức tăng Accuracy khi thêm tri thức thực sự hữu ích.
+SO SÁNH CÔNG BẰNG TRÊN CÙNG BACKBONE / DATA / COMPUTE
+01
+Image-only
+02
+KG + Prompt
+03
+KG + Filter
+04
+SFT + Hard-negative
+05
+CKA (đề xuất)
+Bắt buộc: test độc lập, kiểm tra bỏ ảnh/đổi KG, khoảng tin cậy và ablation; chưa có điểm số CKA.
+=== ppt/slides/slide9.xml ===
+CKA  /  MEDVQA
+ĐỀ XUẤT NGHIÊN CỨU     10 / 10
+Conditional Knowledge Alignment  •  Medical VQA
+Chưa có kết quả thực nghiệm CKA
+CKA-MedVQA
+THANK YOU
+Chúng
+ 
+em
+ 
+rất
+ 
+mong
+ 
+được
+ nhận 
+góp
+ ý

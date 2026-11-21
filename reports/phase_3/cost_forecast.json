@@ -1,0 +1,13 @@
+{
+  "gpu_type": "NVIDIA L4",
+  "modal_l4_rate_usd_per_hr": 0.8,
+  "safety_factor": 1.3,
+  "est_single_1epoch_train_s": 542.4404041614999,
+  "est_single_test_eval_s": 317.8842965532,
+  "planned_train_runs": 5,
+  "planned_eval_runs": 12,
+  "total_estimated_gpu_hours": 1.8130037720683054,
+  "estimated_modal_cost_usd": 1.4504030176546445,
+  "remaining_free_credit_usd": 10.09,
+  "fits_within_free_credit": true
+}

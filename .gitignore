@@ -1,0 +1,18 @@
+@'
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.DS_Store
+
+# Raw images & archives (re-downloaded via cka_med.data.ingest)
+data/raw/
+
+# Large model checkpoints & optimizer states (>100MB GitHub limit)
+artifacts/runs/*/checkpoint_state/
+artifacts/runs/*/adapter/
+*.safetensors
+*.pt
+*.bin
+'@ | Set-Content -Encoding utf8 .gitignore
